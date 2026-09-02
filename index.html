@@ -401,6 +401,7 @@
       entries.forEach(function(entry){
         if (!entry.isIntersecting) return;
         var group = groups.find(function(g){ return g.root === entry.target; });
+        entry.target.classList.add('in');
         if (group){
           group.children.forEach(function(child, i){
             child.classList.add('reveal');
