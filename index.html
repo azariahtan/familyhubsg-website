@@ -61,6 +61,13 @@
   .btn-primary{background:var(--accent);color:#fff;}
   .btn-primary:hover{background:var(--accent-dark);}
   .btn-ghost{border-color:var(--line);color:var(--ink);background:transparent;font-size:14px;padding:9px 18px;}
+  @media (max-width:480px){
+    .brand{font-size:16px;gap:6px;}
+    .brand svg{width:22px;height:22px;}
+    nav{padding:12px 16px;}
+    .btn-ghost{display:none;}
+    .btn-primary{padding:9px 16px;font-size:13.5px;}
+  }
   .btn-ghost:hover{background:var(--bg-alt);}
 
   .hero{text-align:center;padding:88px 24px 0;max-width:760px;margin:0 auto;}
