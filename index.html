@@ -4,7 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FamilyHub SG — Your family's finances, recorded in one place</title>
-<meta name="description" content="Property, loans, insurance, investments and savings — recorded once, visible to your whole household. Built for Singapore families.">
+<meta name="description" content="A shared place for your family's property, loans, insurance, investments and home items, with reminders and full export. Free beta, built for Singapore families.">
+<link rel="canonical" href="https://familyhubsg.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_SG">
+<meta property="og:site_name" content="FamilyHub SG">
+<meta property="og:title" content="FamilyHub SG: built with the family in mind">
+<meta property="og:description" content="One place for your family's property, loans, insurance, investments and home items. Free during beta. Export everything anytime.">
+<meta property="og:url" content="https://familyhubsg.com/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where does my data live?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In Singapore. The main database and your uploaded files are hosted in Singapore with Supabase, and stored in encrypted form. A backup copy is kept for 30 days with Cloudflare, so anything deleted by accident can be recovered." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you sell or share my data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Your data is never sold and never shared with advertisers. It is used for two things only: keeping your information safe and backed up, and finding and fixing problems so the app can improve. The companies that run and monitor the app (Supabase, Cloudflare, and the analytics and error-reporting tools described in the privacy policy) handle limited data on our behalf. Nobody else gets it." }
+    },
+    {
+      "@type": "Question",
+      "name": "What do you do with my data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nothing beyond storing it, backing it up and keeping it secure. Everything is typed in by you and nothing is connected to a bank or financial institution, so we cannot tell whether it is accurate. You can use Me, Mom and Dad instead of full names. Because the app is run by one person, stored data can technically be accessed to keep it working. The privacy policy explains this." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I enter full bank account or card numbers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. As good practice, please do not enter full bank account numbers, credit card numbers or passwords. The name of the bank, or the last 4 digits, is plenty." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I delete my account?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your data is removed from the app straight away, and the last backup copies expire after 30 days, so it is fully gone after 30 days. Backups are what allow things deleted by accident to be restored." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I take my data with me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, any time, from Settings. You can download an Excel workbook of everything, or a full zip that includes your photos and documents. There is also a Word summary of your assets and liabilities, and your home inventory can be downloaded as a CSV file." }
+    }
+  ]
+}
+</script>
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FBF8F0'/%3E%3Cpath d='M9 26.75 L32 6.75 L55 26.75' fill='none' stroke='%232B2E3A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='15' y='30.75' width='34' height='6.5' rx='3.25' fill='%23DC3B24'/%3E%3Crect x='15' y='40.75' width='34' height='6.5' rx='3.25' fill='%23E0A430'/%3E%3Crect x='15' y='50.75' width='34' height='6.5' rx='3.25' fill='%233FA66A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,6 +197,21 @@
     .reveal{opacity:1;transform:none;transition:none;}
     html{scroll-behavior:auto;}
   }
+ /* Why section */
+  .why{padding:88px 24px 24px;}
+  .why-inner{max-width:var(--maxw);margin:0 auto;}
+  .why h2{font-size:clamp(25px,3.4vw,34px);text-align:center;margin-bottom:1em;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .why-item{padding:22px 24px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;}
+  .why-item h3{font-size:21px;margin-bottom:.4em;}
+  .why-item p{font-size:15.5px;margin:0;}
+  @media (max-width:700px){.why-grid{grid-template-columns:1fr;}}
+  /* FAQ section */
+  .faq{padding:88px 24px;background:var(--bg-alt);}
+  .faq-inner{max-width:720px;margin:0 auto;}
+  .faq h2{font-size:clamp(25px,3.2vw,32px);}
+  .faq h3{font-family:'Inter',sans-serif;font-weight:600;font-size:16.5px;margin:1.6em 0 .35em;letter-spacing:0;}
+  .faq p{font-size:15.5px;}
 </style>
 </head>
 <body>
@@ -169,12 +231,13 @@
 </header>
 
 <section class="hero">
-  <h1>Stop being the only one who knows where things stand</h1>
-  <p class="sub">Property, loans, insurance and savings — recorded once, visible to your whole household, so nobody's guessing what's actually owned or owed.</p>
+  <h1>Built with the family in mind</h1>
+  <p class="sub">One place for your family's property, loans, insurance, investments and home items, so if anything happens, your spouse or family knows where everything is.</p>
   <div class="hero-ctas">
     <a class="btn btn-primary" href="https://app.familyhubsg.com" style="padding:12px 26px;font-size:15px;">Get started</a>
   </div>
-  <p class="hero-note">Free during beta · built for Singapore households</p>
+  <p class="hero-note">Free during beta · Built for Singapore households · Export everything anytime</p>
+  <p class="hero-note" style="margin-top:6px;"><a href="/mylegacy-data-deletion/">Using My Legacy? It deletes stored data on 4 January 2027. See what to save.</a></p>
 </section>
 
 <div class="hero-stage" id="heroStage">
@@ -184,6 +247,30 @@
   </div>
 </div>
 
+<section class="why reveal">
+  <div class="why-inner">
+    <h2>Why you might want it</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Know what's due before it's due</h3>
+        <p>FamilyHub shows what's coming up in the next 90 days, including insurance premiums, so you have time to prepare. That could mean making sure there's enough in your bank account for a GIRO premium, or enough cash on hand when a big premium falls due.</p>
+      </div>
+      <div class="why-item">
+        <h3>If something happens to you</h3>
+        <p>If anything happens to you or your family, the spouse or family member you've shared your information with can see where your investments, policies, plans and home items are. It makes a hard time that much simpler.</p>
+      </div>
+      <div class="why-item">
+        <h3>One place for all your family's things</h3>
+        <p>Property, loans, insurance, investments, savings, cards and the things in your home, kept together instead of scattered across folders, apps and one person's memory.</p>
+      </div>
+      <div class="why-item">
+        <h3>You're never locked in</h3>
+        <p>Export everything whenever you like: an Excel workbook, or a full .zip with your photos and documents. There's also a Word summary of your assets and liabilities. Your information is yours to take with you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <section class="reset reveal">
   <div class="eyebrow" style="text-align:center;">What is FamilyHub SG</div>
   <h2>A shared record for everything your family owns and owes</h2>
@@ -326,6 +413,30 @@
   </div>
 </section>
 
+<section class="faq reveal">
+  <div class="faq-inner">
+    <h2>Common questions</h2>
+ 
+    <h3>Where does my data live?</h3>
+    <p>In Singapore. The main database and your uploaded files are hosted in Singapore with Supabase, and stored in encrypted form. A backup copy is kept for 30 days with Cloudflare, so anything deleted by accident can be recovered.</p>
+ 
+    <h3>Do you sell or share my data?</h3>
+    <p>No. Your data is never sold and never shared with advertisers. It's used for two things only: keeping your information safe and backed up, and finding and fixing problems so the app can improve. The companies that run and monitor the app (Supabase, Cloudflare, and the analytics and error-reporting tools described in the <a href="https://app.familyhubsg.com/privacy">privacy policy</a>) handle limited data on our behalf. Nobody else gets it.</p>
+ 
+    <h3>What do you do with my data?</h3>
+    <p>Nothing beyond storing it, backing it up and keeping it secure. Everything is typed in by you and nothing is connected to a bank or financial institution, so I can't tell whether it's accurate, and I have no interest in finding out. You can even use "Me", "Mom" and "Dad" instead of full names. Because the app is run by one person, stored data can technically be accessed to keep it working. The <a href="https://app.familyhubsg.com/privacy">privacy policy</a> explains this.</p>
+ 
+    <h3>Should I enter full bank account or card numbers?</h3>
+    <p>I'd rather you didn't. As good practice, please don't enter full bank account numbers, credit card numbers or passwords. The name of the bank, or the last 4 digits, is plenty.</p>
+ 
+    <h3>What happens if I delete my account?</h3>
+    <p>Your data is removed from the app straight away, and the last backup copies expire after 30 days, so it's fully gone after 30 days. Backups are what let me restore things that were deleted by accident.</p>
+ 
+    <h3>Can I take my data with me?</h3>
+    <p>Yes, any time, from Settings. You can download an Excel workbook of everything, or a full .zip that includes your photos and documents. There's also a Word summary of your assets and liabilities, and your home inventory can be downloaded as a CSV file.</p>
+  </div>
+</section>
+ 
 <section class="final-cta reveal">
   <h2>Start with what you already know</h2>
   <p>Free during beta. Add a property, a policy, or an account — the full picture builds from there.</p>
@@ -336,6 +447,7 @@
   <div class="footer-inner">
     <span>© 2026 FamilyHub SG</span>
     <div class="footer-links">
+      <a href="/mylegacy-data-deletion/">My Legacy changes</a>
       <a href="https://app.familyhubsg.com/privacy">Privacy</a>
       <a href="https://app.familyhubsg.com/terms">Terms</a>
       <a href="https://app.familyhubsg.com">Sign in</a>
