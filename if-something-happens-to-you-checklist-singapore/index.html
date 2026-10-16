@@ -60,16 +60,16 @@
   .skip:focus{left:12px;}
 
   header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  header.site nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--maxw);margin:0 auto;gap:12px;}
+  header.site nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto;gap:12px;}
   .brand{display:flex;align-items:center;gap:10px;font-family:'Newsreader',serif;font-size:19px;font-weight:500;text-decoration:none;}
   .brand svg{width:26px;height:26px;flex-shrink:0;}
   .beta-pill{font-size:11px;color:var(--ink);background:#F0EAD9;border-radius:999px;padding:2px 9px;font-weight:600;}
-  .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 22px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent;font-family:'Inter',sans-serif;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid transparent;font-family:'Inter',sans-serif;}
   .btn-primary{background:var(--ink);color:#fff;}
   .btn-primary:hover{background:#000;}
-  .btn-ghost{border-color:var(--line);color:var(--ink);background:transparent;}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:transparent;font-size:14px;padding:9px 18px;}
   .btn-ghost:hover{background:var(--cream);}
-  @media (max-width:520px){ .brand{font-size:16px;} header.site nav{padding:12px 16px;} .nav-home{display:none;} }
+  @media (max-width:480px){ .brand{font-size:16px;gap:6px;} .brand svg{width:22px;height:22px;} header.site nav{padding:12px 16px;} header.site .btn-ghost{display:none;} header.site .btn-primary{padding:9px 16px;font-size:13.5px;} }
 
   main{padding:0 24px 40px;}
   .col{max-width:var(--col);margin:0 auto;}
@@ -184,8 +184,8 @@
       <span class="beta-pill">Beta</span>
     </a>
     <div style="display:flex;gap:10px;align-items:center;">
-      <a class="btn btn-ghost nav-home" href="/">About the app</a>
-      <a class="btn btn-primary" href="https://app.familyhubsg.com">Open the app</a>
+      <a class="btn btn-ghost" href="https://app.familyhubsg.com">Sign in</a>
+      <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
     </div>
   </nav>
 </header>
@@ -329,7 +329,7 @@
     <span>&copy; 2026 FamilyHub SG</span>
     <div class="footer-links">
       <a href="/">Home</a>
-      <a href="/mylegacy-data-deletion/">My Legacy changes</a>
+      <a href="/guides/">Guides</a>
       <a href="https://app.familyhubsg.com/privacy">Privacy</a>
       <a href="https://app.familyhubsg.com/terms">Terms</a>
       <a href="https://app.familyhubsg.com">Sign in</a>
