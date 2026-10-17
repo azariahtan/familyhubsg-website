@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free family records spreadsheet for Singapore (Excel)</title>
+<meta name="description" content="Free Excel spreadsheet for Singapore families: net worth with CPF, property, loans, insurance, investments and other assets. No sign-up.">
+<link rel="canonical" href="https://familyhubsg.com/household-tracker-spreadsheet-singapore/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A free family records spreadsheet for Singapore">
+<meta property="og:description" content="Net worth, CPF, property, loans, insurance and investments in one Excel file. Free, no sign-up.">
+<meta property="og:url" content="https://familyhubsg.com/household-tracker-spreadsheet-singapore/">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FBF8F0'/%3E%3Cpath d='M9 26.75 L32 6.75 L55 26.75' fill='none' stroke='%232B2E3A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='15' y='30.75' width='34' height='6.5' rx='3.25' fill='%23DC3B24'/%3E%3Crect x='15' y='40.75' width='34' height='6.5' rx='3.25' fill='%23E0A430'/%3E%3Crect x='15' y='50.75' width='34' height='6.5' rx='3.25' fill='%233FA66A'/%3E%3C/svg%3E">
+<style>
+:root{
+    --bg:#ffffff;
+    --cream:#F7F3E6;
+    --ink:#211D17;
+    --soft:#5F574A;
+    --line:#E8E1D2;
+    --red:#DC3B24;
+    --amber:#E0A430;
+    --green:#3FA66A;
+    --maxw:1120px;
+    --col:720px;
+  }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;}
+body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:17px;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+h1, h2, h3{
+    font-family:'Newsreader',Georgia,serif;
+    font-weight:500;
+    font-variant-ligatures:none;
+    line-height:1.18;
+    letter-spacing:-0.01em;
+    margin:0 0 .6em;
+  }
+h1{font-size:clamp(30px,4.6vw,44px);margin-bottom:.5em;}
+h2{font-size:clamp(25px,3.2vw,32px);margin-top:2.4em;}
+h3{font-size:21px;margin-top:1.6em;}
+p{margin:0 0 1.1em;}
+ul, ol{margin:0 0 1.2em;padding-left:1.3em;}
+li{margin-bottom:.45em;}
+a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+a:hover{text-decoration-thickness:2px;}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px;}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:50;}
+.skip:focus{left:12px;}
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+header.site nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto;gap:12px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Newsreader',serif;font-size:19px;font-weight:500;text-decoration:none;}
+.brand svg{width:26px;height:26px;flex-shrink:0;}
+.beta-pill{font-size:11px;color:var(--ink);background:#F0EAD9;border-radius:999px;padding:2px 9px;font-weight:600;}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid transparent;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--ink);color:#fff;}
+.btn-primary:hover{background:#000;}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent;font-size:14px;padding:9px 18px;}
+.btn-ghost:hover{background:var(--cream);}
+@media (max-width:480px){
+.brand{font-size:16px;gap:6px;}
+.brand svg{width:22px;height:22px;}
+header.site nav{padding:12px 16px;}
+header.site .btn-ghost{display:none;}
+header.site .btn-primary{padding:9px 16px;font-size:13.5px;}
+}
+main{padding:0 24px 40px;}
+.col{max-width:var(--col);margin:0 auto;}
+.crumbs{font-size:14px;color:var(--soft);padding:28px 0 0;}
+.crumbs a{color:var(--soft);}
+.meta{font-size:14px;color:var(--soft);}
+.note{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:16px;}
+.note p:last-child{margin-bottom:0;}
+table{width:100%;border-collapse:collapse;font-size:15px;}
+caption{text-align:left;font-size:14px;color:var(--soft);padding-bottom:10px;}
+th, td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{background:var(--cream);font-weight:600;font-size:14px;}
+td:first-child{font-weight:600;width:20%;}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--ink);margin:2px 8px 0 0;vertical-align:top;}
+@media (max-width:760px){
+table, thead, tbody, tr, th, td{display:block;}
+thead{position:absolute;left:-9999px;}
+tr{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;padding:6px 0;}
+td{border:0;padding:8px 16px;width:auto !important;}
+td::before{content:attr(data-label);display:block;font-weight:600;font-size:13px;color:var(--soft);margin-bottom:2px;}
+td:first-child::before{display:none;}
+}
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:28px 26px;margin:34px 0 10px;}
+.cta h2{color:#fff;margin:0 0 .4em;font-size:28px;}
+.cta p{color:rgba(255,255,255,.82);}
+.cta .btn-primary{background:#fff;color:var(--ink);}
+.cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;}
+.cta .btn-ghost:hover{background:rgba(255,255,255,.1);}
+.cta a{color:#fff;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+.small{font-size:14px;color:var(--soft);}
+footer{padding:36px 24px;border-top:1px solid var(--line);}
+.footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:14px;color:var(--soft);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{color:var(--soft);}
+@media print{
+header.site, .cta, footer, .skip, .crumbs{display:none !important;}
+body{font-size:12pt;}
+main{padding:0;}
+a{text-decoration:none;}
+tr{break-inside:avoid;}
+h2{margin-top:1.4em;}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto;}
+}
+.box{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:16px;}
+.box.note{border-left-color:var(--amber);}
+.box p:last-child, .box ol:last-child{margin-bottom:0;}
+details{border-bottom:1px solid var(--line);padding:12px 0;}
+summary{cursor:pointer;font-weight:600;}
+details p{margin:10px 0 0;}
+
+
+  .dl-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 10px;}
+  .dl .btn{padding:12px 22px;font-size:15px;}
+  .dl p{margin:0;}
+
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "A free family records spreadsheet for Singapore", "datePublished": "2026-10-17", "dateModified": "2026-10-17", "inLanguage": "en-SG", "author": {"@type": "Organization", "name": "FamilyHub SG", "url": "https://familyhubsg.com/"}, "publisher": {"@type": "Organization", "name": "FamilyHub SG", "url": "https://familyhubsg.com/"}, "mainEntityOfPage": "https://familyhubsg.com/household-tracker-spreadsheet-singapore/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. There is nothing to sign up for and no email address to hand over. Use it, copy it and share it."}}, {"@type": "Question", "name": "Does anything I type leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an ordinary Excel file with no macros and no internet connection. We never see what you type. It stays wherever you save it."}}, {"@type": "Question", "name": "Can I import the spreadsheet into the FamilyHub SG app?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. It may come in future, and if you would like it, email support@familyhubsg.com. The sheet and column names match the app's own Excel export, so you can type or paste your rows across in the meantime."}}, {"@type": "Question", "name": "What about foreign currency?", "acceptedAnswer": {"@type": "Answer", "text": "Enter everything in Singapore dollars. Convert a foreign amount at today's rate first."}}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <nav aria-label="Main">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FBF8F0"/><path d="M9 26.75 L32 6.75 L55 26.75" fill="none" stroke="#2B2E3A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="15" y="30.75" width="34" height="6.5" rx="3.25" fill="#DC3B24"/><rect x="15" y="40.75" width="34" height="6.5" rx="3.25" fill="#E0A430"/><rect x="15" y="50.75" width="34" height="6.5" rx="3.25" fill="#3FA66A"/></svg>
+      FamilyHub SG
+      <span class="beta-pill">Beta</span>
+    </a>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a class="btn btn-ghost" href="https://app.familyhubsg.com">Sign in</a>
+      <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<article class="col">
+<p class="crumbs"><a href="/">FamilyHub SG</a> / <a href="/guides/">Guides</a> / Family records spreadsheet</p>
+<h1>A free family records spreadsheet for Singapore</h1>
+<p class="meta">Version 1.0 &middot; Last updated 17 October 2026 &middot; 3 minute read</p>
+
+<p>An Excel workbook for what a Singapore family owns and owes: property, loans, insurance, investments, savings and CPF, and other assets. It works out your net worth. No sign-up and no email address.</p>
+
+<div class="box dl">
+  <p><strong>Free download</strong></p>
+  <div class="dl-row">
+    <a class="btn btn-primary" href="/familyhub-sg-family-records-template.xlsx" download>Blank template</a>
+    <a class="btn btn-ghost" href="/familyhub-sg-family-records-example.xlsx" download>Example copy</a>
+  </div>
+  <p class="small">Small Excel files (.xlsx). The example copy holds made-up data for a fictional family, so you can see how it fits together.</p>
+</div>
+
+<h2>What is inside</h2>
+<ul>
+  <li><strong>Dashboard.</strong> Your net worth and what it is made of. It updates by itself.</li>
+  <li><strong>Properties.</strong> Each property, its value and any rent.</li>
+  <li><strong>Loans.</strong> Each loan with its balance, rate and repricing date. A mortgage links to its property.</li>
+  <li><strong>Insurance.</strong> Every policy, who is covered, the premium, the sum assured and any surrender value.</li>
+  <li><strong>Investments.</strong> Funds, shares, bonds and anything else you hold.</li>
+  <li><strong>Savings &amp; CPF.</strong> Bank accounts, fixed deposits, SRS, and your CPF OA, SA, MA and RA balances.</li>
+  <li><strong>Other Assets.</strong> A car, jewellery, or anything else of value.</li>
+</ul>
+<p>Dropdown lists stop typing mistakes. The sheet names and column names match the FamilyHub SG app's own Excel export.</p>
+
+<h2>How net worth is worked out</h2>
+<p>Assets are your property values, investments, savings and CPF balances, other assets, and any insurance surrender value you can already access. Liabilities are the current balance of every loan. Net worth is assets minus liabilities. Every amount is in Singapore dollars.</p>
+
+<h2>Start in three steps</h2>
+<ol>
+  <li>Type one row for each property, loan, policy, investment, account or asset. Leave a cell empty if you do not know.</li>
+  <li>Enter every amount in Singapore dollars. Convert a foreign amount at today's rate first.</li>
+  <li>Open the <strong>Dashboard</strong>.</li>
+</ol>
+<p>Type money as a plain number such as 450000, a rate such as 3.9 for 3.9%, and dates such as 15 Mar 2027. Check CPF balances against the <a href="https://www.cpf.gov.sg/member/account-services">CPF website</a> (Singpass login) and policy details against your policy papers. The sheet is only as accurate as what you type.</p>
+
+<h2>What it does not do</h2>
+<p>It does not warn you about dates or send reminders, and it does not work out premium due dates. It has no cash-flow or projection charts, stores no photos, handles one currency only, and cannot share or sync between family members. The <a href="/">FamilyHub SG app</a> covers these.</p>
+
+<h2>Check it before you rely on it</h2>
+<p>We compared every Dashboard total with a separate calculation, covering CPF, surrender values that are not yet accessible, and amounts typed as text. That check was done in LibreOffice. The file is built for Microsoft Excel. We have not been able to check Google Sheets or Apple Numbers, so compare the Dashboard with your own sums if you use either.</p>
+
+<h2>Keep it safe</h2>
+<p>Save it somewhere private and back it up. Do not type full account numbers, card numbers, passwords or NRIC numbers; the last four digits are enough. Tell one person you trust where the file is.</p>
+
+<h2>Questions</h2>
+  <details><summary>Is it really free?</summary>
+    <p>Yes. There is nothing to sign up for and no email address to hand over. Use it, copy it and share it.</p></details>
+  <details><summary>Does anything I type leave my computer?</summary>
+    <p>No. It is an ordinary Excel file with no macros and no internet connection. We never see what you type. It stays wherever you save it.</p></details>
+  <details><summary>Can I import the spreadsheet into the FamilyHub SG app?</summary>
+    <p>Not yet. It may come in future, and if you would like it, email support@familyhubsg.com. The sheet and column names match the app&#x27;s own Excel export, so you can type or paste your rows across in the meantime.</p></details>
+  <details><summary>What about foreign currency?</summary>
+    <p>Enter everything in Singapore dollars. Convert a foreign amount at today&#x27;s rate first.</p></details>
+
+<div class="box note" style="margin-top:32px">
+  <p><strong>A note on who wrote this.</strong> This page is by the founder of FamilyHub SG, who is not a licensed financial adviser. The spreadsheet is a record-keeping tool. It is general information, not financial, legal or tax advice.</p>
+</div>
+
+<div class="cta">
+  <h2>Outgrown the spreadsheet?</h2>
+  <p>FamilyHub SG is a free beta app for Singapore households. It keeps the same records, shares them with your family as viewers or editors, lists what is due in the next 90 days, holds photos of your home items, and shows net worth and cash-flow projections. You can export everything to Excel at any time.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
+    <a class="btn btn-ghost" href="/">See how it works</a>
+  </div>
+</div>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>CPF Board, <a href="https://www.cpf.gov.sg/member/account-services">Account services</a> (view your account balances with Singpass on my cpf digital services or the CPF Mobile app). Checked 16 October 2026.</li>
+  <li>CPF on Ask.gov.sg, <a href="https://ask.gov.sg/cpf/questions/cltr1sd9d02mgbykzj9m6t14t">How do I check my CPF account balances, contribution, transaction records?</a> Checked 16 October 2026.</li>
+</ul>
+<p class="small">Related: <a href="/track-insurance-policies-singapore/">Track your family's insurance policies</a> &middot; <a href="/if-something-happens-to-you-checklist-singapore/">If something happens to you: a checklist</a>.</p>
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 FamilyHub SG</span>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/guides/">Guides</a>
+      <a href="https://app.familyhubsg.com/privacy">Privacy</a>
+      <a href="https://app.familyhubsg.com/terms">Terms</a>
+      <a href="https://app.familyhubsg.com">Sign in</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
