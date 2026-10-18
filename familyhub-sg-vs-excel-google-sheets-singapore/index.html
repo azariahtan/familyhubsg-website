@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FamilyHub SG vs Excel or Google Sheets: honest comparison</title>
+<meta name="description" content="Excel or Google Sheets, or an app, for your family records in Singapore? A side-by-side table, including where a spreadsheet is the better choice.">
+<link rel="canonical" href="https://familyhubsg.com/familyhub-sg-vs-excel-google-sheets-singapore/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FamilyHub SG vs Excel or Google Sheets: honest comparison">
+<meta property="og:description" content="Excel or Google Sheets, or an app, for your family records in Singapore? A side-by-side table, including where a spreadsheet is the better choice.">
+<meta property="og:url" content="https://familyhubsg.com/familyhub-sg-vs-excel-google-sheets-singapore/">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FBF8F0'/%3E%3Cpath d='M9 26.75 L32 6.75 L55 26.75' fill='none' stroke='%232B2E3A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='15' y='30.75' width='34' height='6.5' rx='3.25' fill='%23DC3B24'/%3E%3Crect x='15' y='40.75' width='34' height='6.5' rx='3.25' fill='%23E0A430'/%3E%3Crect x='15' y='50.75' width='34' height='6.5' rx='3.25' fill='%233FA66A'/%3E%3C/svg%3E">
+<style>
+:root{
+    --bg:#ffffff;
+    --cream:#F7F3E6;
+    --ink:#211D17;
+    --soft:#5F574A;
+    --line:#E8E1D2;
+    --red:#DC3B24;
+    --amber:#E0A430;
+    --green:#3FA66A;
+    --maxw:1120px;
+    --col:720px;
+  }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;}
+body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:17px;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+h1, h2, h3{
+    font-family:'Newsreader',Georgia,serif;
+    font-weight:500;
+    font-variant-ligatures:none;
+    line-height:1.18;
+    letter-spacing:-0.01em;
+    margin:0 0 .6em;
+  }
+h1{font-size:clamp(30px,4.6vw,44px);margin-bottom:.5em;}
+h2{font-size:clamp(25px,3.2vw,32px);margin-top:2.4em;}
+h3{font-size:21px;margin-top:1.6em;}
+p{margin:0 0 1.1em;}
+ul, ol{margin:0 0 1.2em;padding-left:1.3em;}
+li{margin-bottom:.45em;}
+a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+a:hover{text-decoration-thickness:2px;}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px;}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:50;}
+.skip:focus{left:12px;}
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+header.site nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto;gap:12px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Newsreader',serif;font-size:19px;font-weight:500;text-decoration:none;}
+.brand svg{width:26px;height:26px;flex-shrink:0;}
+.beta-pill{font-size:11px;color:var(--ink);background:#F0EAD9;border-radius:999px;padding:2px 9px;font-weight:600;}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid transparent;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--ink);color:#fff;}
+.btn-primary:hover{background:#000;}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent;font-size:14px;padding:9px 18px;}
+.btn-ghost:hover{background:var(--cream);}
+@media (max-width:480px){
+.brand{font-size:16px;gap:6px;}
+.brand svg{width:22px;height:22px;}
+header.site nav{padding:12px 16px;}
+header.site .btn-ghost{display:none;}
+header.site .btn-primary{padding:9px 16px;font-size:13.5px;}
+}
+main{padding:0 24px 40px;}
+.col{max-width:var(--col);margin:0 auto;}
+.crumbs{font-size:14px;color:var(--soft);padding:28px 0 0;}
+.crumbs a{color:var(--soft);}
+.meta{font-size:14px;color:var(--soft);}
+.note{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:16px;}
+.note p:last-child{margin-bottom:0;}
+table{width:100%;border-collapse:collapse;font-size:15px;}
+caption{text-align:left;font-size:14px;color:var(--soft);padding-bottom:10px;}
+th, td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{background:var(--cream);font-weight:600;font-size:14px;}
+td:first-child{font-weight:600;width:20%;}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--ink);margin:2px 8px 0 0;vertical-align:top;}
+@media (max-width:760px){
+table, thead, tbody, tr, th, td{display:block;}
+thead{position:absolute;left:-9999px;}
+tr{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;padding:6px 0;}
+td{border:0;padding:8px 16px;width:auto !important;}
+td::before{content:attr(data-label);display:block;font-weight:600;font-size:13px;color:var(--soft);margin-bottom:2px;}
+td:first-child::before{display:none;}
+}
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:28px 26px;margin:34px 0 10px;}
+.cta h2{color:#fff;margin:0 0 .4em;font-size:28px;}
+.cta p{color:rgba(255,255,255,.82);}
+.cta .btn-primary{background:#fff;color:var(--ink);}
+.cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;}
+.cta .btn-ghost:hover{background:rgba(255,255,255,.1);}
+.cta a{color:#fff;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+.small{font-size:14px;color:var(--soft);}
+footer{padding:36px 24px;border-top:1px solid var(--line);}
+.footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:14px;color:var(--soft);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{color:var(--soft);}
+@media print{
+header.site, .cta, footer, .skip, .crumbs{display:none !important;}
+body{font-size:12pt;}
+main{padding:0;}
+a{text-decoration:none;}
+tr{break-inside:avoid;}
+h2{margin-top:1.4em;}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto;}
+}
+.box{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:16px;}
+.box.note{border-left-color:var(--amber);}
+.box p:last-child, .box ol:last-child{margin-bottom:0;}
+details{border-bottom:1px solid var(--line);padding:12px 0;}
+summary{cursor:pointer;font-weight:600;}
+details p{margin:10px 0 0;}
+
+
+  .dl-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 10px;}
+  .dl .btn{padding:12px 22px;font-size:15px;}
+  .dl p{margin:0;}
+
+
+.cmp-wrap{margin:26px 0 8px;}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--soft);margin:0 0 14px;}
+.legend span{display:inline-flex;align-items:center;gap:8px;}
+.ic{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:13px;font-weight:700;line-height:1;flex-shrink:0;}
+.ic.y{background:#2F8F5B;color:#fff;}
+.ic.n{background:#C8321D;color:#fff;}
+.ic.p{background:var(--amber);color:var(--ink);}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+table.cmp{border:1px solid var(--line);border-radius:14px;border-collapse:separate;border-spacing:0;overflow:hidden;font-size:15px;line-height:1.5;}
+.cmp thead th{background:var(--cream);font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:17px;padding:14px 16px;border-bottom:1px solid var(--line);}
+.cmp thead th.us{border-top:4px solid var(--green);}
+.cmp thead th.them{border-top:4px solid var(--line);}
+.cmp td,.cmp tbody th{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;}
+.cmp td:first-child,.cmp th.need{width:27%;font-weight:600;}
+.cmp td.c{width:36.5%;}
+.cmp td.us{background:#F6FAF6;}
+.cmp td.c .cell{display:flex;gap:10px;align-items:flex-start;}
+.cmp td.c .cell .ic{margin-top:1px;}
+.cmp td.c .cell > span:last-child{flex:1;}
+.cmp tr.grp th{background:var(--ink);color:#fff;font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 16px;font-weight:600;border-bottom:0;}
+.cmp tr.grp.fair th{background:#6B4E00;}
+.cmp tbody tr:last-child td{border-bottom:0;}
+.cmp .t{display:block;font-weight:600;}
+.cmp .d{display:block;color:var(--soft);font-size:14px;margin-top:2px;}
+@media (max-width:760px){
+table.cmp{border:0;border-radius:0;overflow:visible;display:block;}
+.cmp thead{display:none;}
+.cmp tbody,.cmp tr{display:block;}
+.cmp tr.grp{margin:22px 0 10px;border:0;padding:0;}
+.cmp tr.grp th{display:block;border-radius:10px;}
+.cmp tr.row{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:0;overflow:hidden;background:#fff;}
+.cmp td{display:block;border:0;padding:12px 16px !important;width:auto !important;}
+.cmp td:first-child{background:var(--cream);font-size:16px;border-bottom:1px solid var(--line);}
+.cmp td:first-child::before{display:none !important;}
+.cmp td.c::before{content:attr(data-label);display:block;font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin-bottom:6px;}
+.cmp td.us{background:#F6FAF6;}
+}
+@media print{.cmp tr.grp th{background:#fff;color:#000;border-bottom:2px solid #000;}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0;}
+.two .box{margin:0;}
+@media (max-width:760px){.two{grid-template-columns:1fr;}}
+.box.red{border-left-color:var(--red);}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <nav aria-label="Main">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FBF8F0"/><path d="M9 26.75 L32 6.75 L55 26.75" fill="none" stroke="#2B2E3A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="15" y="30.75" width="34" height="6.5" rx="3.25" fill="#DC3B24"/><rect x="15" y="40.75" width="34" height="6.5" rx="3.25" fill="#E0A430"/><rect x="15" y="50.75" width="34" height="6.5" rx="3.25" fill="#3FA66A"/></svg>
+      FamilyHub SG
+      <span class="beta-pill">Beta</span>
+    </a>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a class="btn btn-ghost" href="https://app.familyhubsg.com">Sign in</a>
+      <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<article class="col">
+<p class="crumbs"><a href="/">FamilyHub SG</a> / <a href="/guides/">Guides</a> / FamilyHub SG vs a spreadsheet</p>
+<h1>FamilyHub SG vs Excel or Google Sheets: an honest comparison</h1>
+<p class="meta">Last updated 18 October 2026 &middot; 5 minute read</p>
+
+<p>Many families keep their money records in a spreadsheet: a heading row, a list of policies, loans and accounts, and that is it. That works, and it is free. This page shows what a spreadsheet does well, what it leaves to you, and what an app like FamilyHub SG adds.</p>
+
+<div class="box note">
+  <p><strong>I built FamilyHub SG, so I am biased.</strong> That is why the table ends with the things a spreadsheet does better, and why it uses a <em>partly</em> mark where an expert could make a spreadsheet do the job. A <em>not included</em> mark means there is no built-in feature, not that it is impossible.</p>
+</div>
+
+<h2>The short answer</h2>
+<p>A spreadsheet is a blank page. It can do almost anything, but it does nothing until you build it, and nothing warns you when a date is close. FamilyHub SG is built for one job: a Singapore family keeping property, loans, insurance, investments, savings, cards and home items in one shared place, with a list of what is due.</p>
+<p>If you only need a list that one person updates now and then, a spreadsheet is enough. If several family members need the same up-to-date picture, or you keep missing dates, an app does more of the work.</p>
+
+<h2>Side by side</h2>
+<div class="cmp-wrap">
+<p class="legend" aria-label="Key">
+<span><span class="ic y" aria-hidden="true">&#10003;</span> Built in</span>
+<span><span class="ic p" aria-hidden="true">~</span> Possible, but you set it up and look after it</span>
+<span><span class="ic n" aria-hidden="true">&#10007;</span> Not included</span>
+</p>
+<table class="cmp">
+<caption class="sr">Excel or Google Sheets compared with FamilyHub SG, feature by feature</caption>
+<thead><tr><th class="need" scope="col">What you need</th><th class="them" scope="col">Excel or Google Sheets</th><th class="us" scope="col">FamilyHub SG</th></tr></thead>
+<tbody>
+<tr class="grp"><th colspan="3" scope="colgroup">Staying on top of dates</th></tr>
+<tr class="row"><td>Warns you before something is due</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Only if you build it</span><span class="d">Nothing is built in. You can colour cells by date with rules you write and look after.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Lists what is due in the next 90 days</span><span class="d">Insurance premiums, policy ends, loan repricing and loan end dates, fixed deposit maturity, warranty expiry and card points expiry. You set how many days before each alert appears.</span></span></div></td></tr>
+<tr class="row"><td>Works out the next premium date</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Needs your own formulas</span><span class="d">Otherwise you retype each date every year.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">From the premium frequency</span><span class="d">Flags overdue premiums and marks GIRO ones, so you know to check the bank balance.</span></span></div></td></tr>
+<tr class="row"><td>Your own reminders</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">No reminders</span><span class="d">A calendar app is separate and not linked to your records.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">One-off or repeating</span><span class="d">Weekly, monthly or yearly, with a Done button.</span></span></div></td></tr>
+<tr class="grp"><th colspan="3" scope="colgroup">The big picture</th></tr>
+<tr class="row"><td>Net worth from all your records</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Yes, if you build the formulas</span><span class="d">Our free <a href="/household-tracker-spreadsheet-singapore/">family records spreadsheet</a> already has them.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Updates by itself</span><span class="d">Property, investments, savings, CPF-linked accounts and other assets, less loans.</span></span></div></td></tr>
+<tr class="row"><td>Net worth and cash flow over the years</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">You build and maintain the model</span><span class="d">Charts are possible. The sums behind them are up to you.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">A projection chart and a cash flow chart</span><span class="d">Click a year to see what is behind it. Loan paydown is included.</span></span></div></td></tr>
+<tr class="row"><td>A check-up and an estate checklist</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">Not included</span><span class="d">You would design your own.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">On the home screen</span><span class="d">A Financial Health check and an Estate Planning checklist with progress.</span></span></div></td></tr>
+<tr class="row"><td>Foreign currency in Singapore dollars</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Possible, often typed by hand</span><span class="d">Google Sheets can fetch rates with a formula. Many people type them in.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Converted for you</span><span class="d">Exchange rates are refreshed every night.</span></span></div></td></tr>
+<tr class="grp"><th colspan="3" scope="colgroup">Photos and papers</th></tr>
+<tr class="row"><td>Photos of things in your home</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Possible, but fiddly</span><span class="d">Recent Excel can place a picture inside a cell. Ordinary paste leaves it floating over the cells, where it can shift when you sort. Every photo is stored inside the file, so the file grows.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Attach photos to any item</span><span class="d">Photos are stored separately from your list. Up to 5 MB each.</span></span></div></td></tr>
+<tr class="row"><td>Policy papers next to the record</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">A link to a file elsewhere</span><span class="d">It breaks if the file is moved or renamed.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Upload the document to the record</span><span class="d">Up to 10 MB each. Included in the full export.</span></span></div></td></tr>
+<tr class="grp"><th colspan="3" scope="colgroup">Family sharing and safety</th></tr>
+<tr class="row"><td>Everyone sees the latest version</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Google Sheets yes. Emailed Excel files no.</span><span class="d">An emailed file becomes several copies that drift apart.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">One shared household</span><span class="d">Every member sees the same current records.</span></span></div></td></tr>
+<tr class="row"><td>Who can change things</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Per file, not per person's role in the family</span><span class="d">Google Sheets has viewer and editor access for the whole file.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Editors and viewers</span><span class="d">You choose who can change records and who can only look.</span></span></div></td></tr>
+<tr class="row"><td>Each record belongs to a person</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">A column you add and filter yourself</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Tagged to a family member</span><span class="d">Filter the whole app by person.</span></span></div></td></tr>
+<tr class="row"><td>See who changed what, and get a deleted record back</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Only if the file is online</span><span class="d">Google Sheets and Excel files on OneDrive keep version history. A file on your own computer does not.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Audit trail and Recycle Bin</span><span class="d">The main financial records show who changed what. Deleted items stay in the Recycle Bin for 30 days.</span></span></div></td></tr>
+<tr class="row"><td>Typing mistakes</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Dropdowns are possible</span><span class="d">A date or amount typed as text can quietly break a total.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Forms with set fields</span><span class="d">You pick from lists instead of typing everything.</span></span></div></td></tr>
+<tr class="row"><td>Showing a financial adviser part of it</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">You send the whole file</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">You choose what an adviser sees</span><span class="d">By category and by family member. Read-only.</span></span></div></td></tr>
+<tr class="row"><td>Backup</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">You back it up yourself</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Automatic</span><span class="d">Records are backed up nightly. Photos and documents are backed up hourly.</span></span></div></td></tr>
+<tr class="grp fair"><th colspan="3" scope="colgroup">Where a spreadsheet is the better choice</th></tr>
+<tr class="row"><td>Works without internet</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Yes</span><span class="d">An Excel file on your computer opens anywhere.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">No</span><span class="d">The app needs an internet connection.</span></span></div></td></tr>
+<tr class="row"><td>Your data stays on your own device</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Yes, if you keep the file there</span><span class="d">Nothing leaves your computer.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">No</span><span class="d">Your records are stored online, in Singapore. The founder and one IT developer can access stored data to run the service.</span></span></div></td></tr>
+<tr class="row"><td>Any layout, any formula</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Yes</span><span class="d">Add columns, change the layout, build your own sums.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">A fixed set of fields</span><span class="d">You can't redesign the screens.</span></span></div></td></tr>
+<tr class="row"><td>Alerts to your phone or email</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">No</span><span class="d">Excel does not send them on its own.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic n" aria-hidden="true">✗</span><span class="sr">No. </span><span><span class="t">Not yet</span><span class="d">Alerts show when you open the app. Nothing is sent to your phone or email.</span></span></div></td></tr>
+<tr class="row"><td>Cost</td><td class="c" data-label="Excel or Google Sheets"><div class="cell"><span class="ic y" aria-hidden="true">✓</span><span class="sr">Yes. </span><span><span class="t">Free to start</span><span class="d">Google Sheets is free. Excel needs Microsoft 365 or a free web version.</span></span></div></td><td class="c us" data-label="FamilyHub SG"><div class="cell"><span class="ic p" aria-hidden="true">~</span><span class="sr">Partly. </span><span><span class="t">Free during the beta</span><span class="d">Pricing for later has not been set.</span></span></div></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">FamilyHub SG is a web app for your phone or computer. It does not link to your bank, so you type your records in yourself. It is in beta.</p>
+
+<h2>Which should you use?</h2>
+<div class="two">
+  <div class="box">
+    <p><strong>A spreadsheet is enough if&hellip;</strong></p>
+    <ul>
+      <li>one person keeps the records and nobody else needs to see them</li>
+      <li>you want the file on your own computer and offline</li>
+      <li>you like building your own layout and formulas</li>
+      <li>you already check your dates in a calendar</li>
+    </ul>
+  </div>
+  <div class="box">
+    <p><strong>An app helps if&hellip;</strong></p>
+    <ul>
+      <li>your spouse or parents also need to find things</li>
+      <li>you have missed a renewal, repricing or maturity date before</li>
+      <li>you want photos of your home items kept with the record</li>
+      <li>you want net worth and cash flow worked out for you</li>
+    </ul>
+  </div>
+</div>
+<p>You do not have to choose straight away. Start with the <a href="/household-tracker-spreadsheet-singapore/">free family records spreadsheet</a> to get everything written down in one place. Move to the app when the spreadsheet starts to feel like work.</p>
+
+<h2>Questions</h2>
+<details><summary>Can I bring my spreadsheet into the app?</summary>
+  <p>Not yet. It may come in future, and if you would like it, email support@familyhubsg.com. The free spreadsheet uses the same sheet and column names as the app's own Excel export, so you can copy your rows across by hand in the meantime.</p></details>
+<details><summary>Do I still type everything in myself?</summary>
+  <p>Yes. The app does not connect to your bank or insurer. You enter each property, loan, policy and account once. After that, the totals, charts and due dates are worked out for you.</p></details>
+<details><summary>Can I take my data out again?</summary>
+  <p>Yes. You can export everything to an Excel workbook, or a full .zip with your photos and documents. There is also a Word summary of your assets and liabilities.</p></details>
+<details><summary>Is the app free?</summary>
+  <p>It is free during the beta. Pricing for later has not been set, and everything you enter can be exported whenever you like.</p></details>
+
+<div class="box note" style="margin-top:32px">
+  <p><strong>How this was checked.</strong> The FamilyHub SG rows were checked against the app's own code on 18 October 2026. The Excel and Google Sheets rows describe the programs as most people use them. The picture row follows Microsoft's help pages, checked the same day. I have not tested this on Apple Numbers. The author is the founder of FamilyHub SG, not a licensed financial adviser. This is general information, not financial, legal or tax advice.</p>
+</div>
+
+<div class="cta">
+  <h2>Try it with the sample family</h2>
+  <p>FamilyHub SG is a free beta app for Singapore households. You can look around with a made-up family before you enter anything of your own. You can export everything at any time.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
+    <a class="btn btn-ghost" href="/household-tracker-spreadsheet-singapore/">Free spreadsheet</a>
+  </div>
+</div>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li>Microsoft Support, <a href="https://support.microsoft.com/office/e9317aee-4294-49a3-875c-9dd95845bab0">Insert picture in cell in Excel</a>. Checked 18 October 2026.</li>
+  <li>Microsoft 365 Insider blog, <a href="https://insider.microsoft365.com/en-us/blog/insert-pictures-in-cells-in-excel">Insert pictures in cells in Excel</a>. Checked 18 October 2026.</li>
+</ul>
+<p class="small">Related: <a href="/household-tracker-spreadsheet-singapore/">A free family records spreadsheet for Singapore</a> &middot; <a href="/track-insurance-policies-singapore/">Track your family's insurance policies</a> &middot; <a href="/if-something-happens-to-you-checklist-singapore/">If something happens to you: a checklist</a>.</p>
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 FamilyHub SG</span>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/guides/">Guides</a>
+      <a href="https://app.familyhubsg.com/privacy">Privacy</a>
+      <a href="https://app.familyhubsg.com/terms">Terms</a>
+      <a href="https://app.familyhubsg.com">Sign in</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
