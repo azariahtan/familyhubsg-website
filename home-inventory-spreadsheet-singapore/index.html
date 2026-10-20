@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free home inventory spreadsheet (Excel) for Singapore</title>
+<meta name="description" content="Free Excel home inventory for Singapore families: list what you own, which room and which box it is in, with totals by room. No sign-up.">
+<link rel="canonical" href="https://familyhubsg.com/home-inventory-spreadsheet-singapore/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A free home inventory spreadsheet for Singapore">
+<meta property="og:description" content="What you own, which room, which box. One free Excel file with totals by room.">
+<meta property="og:url" content="https://familyhubsg.com/home-inventory-spreadsheet-singapore/">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FBF8F0'/%3E%3Cpath d='M9 26.75 L32 6.75 L55 26.75' fill='none' stroke='%232B2E3A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='15' y='30.75' width='34' height='6.5' rx='3.25' fill='%23DC3B24'/%3E%3Crect x='15' y='40.75' width='34' height='6.5' rx='3.25' fill='%23E0A430'/%3E%3Crect x='15' y='50.75' width='34' height='6.5' rx='3.25' fill='%233FA66A'/%3E%3C/svg%3E">
+<style>
+:root{
+    --bg:#ffffff;
+    --cream:#F7F3E6;
+    --ink:#211D17;
+    --soft:#5F574A;
+    --line:#E8E1D2;
+    --red:#DC3B24;
+    --amber:#E0A430;
+    --green:#3FA66A;
+    --maxw:1120px;
+    --col:720px;
+  }
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;}
+body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:17px;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+  }
+h1, h2, h3{
+    font-family:'Newsreader',Georgia,serif;
+    font-weight:500;
+    font-variant-ligatures:none;
+    line-height:1.18;
+    letter-spacing:-0.01em;
+    margin:0 0 .6em;
+  }
+h1{font-size:clamp(30px,4.6vw,44px);margin-bottom:.5em;}
+h2{font-size:clamp(25px,3.2vw,32px);margin-top:2.4em;}
+h3{font-size:21px;margin-top:1.6em;}
+p{margin:0 0 1.1em;}
+ul, ol{margin:0 0 1.2em;padding-left:1.3em;}
+li{margin-bottom:.45em;}
+a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+a:hover{text-decoration-thickness:2px;}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px;}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:50;}
+.skip:focus{left:12px;}
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+header.site nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto;gap:12px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Newsreader',serif;font-size:19px;font-weight:500;text-decoration:none;}
+.brand svg{width:26px;height:26px;flex-shrink:0;}
+.beta-pill{font-size:11px;color:var(--ink);background:#F0EAD9;border-radius:999px;padding:2px 9px;font-weight:600;}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid transparent;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--ink);color:#fff;}
+.btn-primary:hover{background:#000;}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent;font-size:14px;padding:9px 18px;}
+.btn-ghost:hover{background:var(--cream);}
+@media (max-width:480px){
+.brand{font-size:16px;gap:6px;}
+.brand svg{width:22px;height:22px;}
+header.site nav{padding:12px 16px;}
+header.site .btn-ghost{display:none;}
+header.site .btn-primary{padding:9px 16px;font-size:13.5px;}
+}
+main{padding:0 24px 40px;}
+.col{max-width:var(--col);margin:0 auto;}
+.crumbs{font-size:14px;color:var(--soft);padding:28px 0 0;}
+.crumbs a{color:var(--soft);}
+.meta{font-size:14px;color:var(--soft);}
+.note{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:16px;}
+.note p:last-child{margin-bottom:0;}
+table{width:100%;border-collapse:collapse;font-size:15px;}
+caption{text-align:left;font-size:14px;color:var(--soft);padding-bottom:10px;}
+th, td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{background:var(--cream);font-weight:600;font-size:14px;}
+td:first-child{font-weight:600;width:20%;}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--ink);margin:2px 8px 0 0;vertical-align:top;}
+@media (max-width:760px){
+table, thead, tbody, tr, th, td{display:block;}
+thead{position:absolute;left:-9999px;}
+tr{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;padding:6px 0;}
+td{border:0;padding:8px 16px;width:auto !important;}
+td::before{content:attr(data-label);display:block;font-weight:600;font-size:13px;color:var(--soft);margin-bottom:2px;}
+td:first-child::before{display:none;}
+}
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:28px 26px;margin:34px 0 10px;}
+.cta h2{color:#fff;margin:0 0 .4em;font-size:28px;}
+.cta p{color:rgba(255,255,255,.82);}
+.cta .btn-primary{background:#fff;color:var(--ink);}
+.cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;}
+.cta .btn-ghost:hover{background:rgba(255,255,255,.1);}
+.cta a{color:#fff;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+.small{font-size:14px;color:var(--soft);}
+footer{padding:36px 24px;border-top:1px solid var(--line);}
+.footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:14px;color:var(--soft);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{color:var(--soft);}
+@media print{
+header.site, .cta, footer, .skip, .crumbs{display:none !important;}
+body{font-size:12pt;}
+main{padding:0;}
+a{text-decoration:none;}
+tr{break-inside:avoid;}
+h2{margin-top:1.4em;}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto;}
+}
+.box{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:16px;}
+.box.note{border-left-color:var(--amber);}
+.box p:last-child, .box ol:last-child{margin-bottom:0;}
+details{border-bottom:1px solid var(--line);padding:12px 0;}
+summary{cursor:pointer;font-weight:600;}
+details p{margin:10px 0 0;}
+
+
+  .dl-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 10px;}
+  .dl .btn{padding:12px 22px;font-size:15px;}
+  .dl p{margin:0;}
+
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "A free home inventory spreadsheet for Singapore", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "en-SG", "author": {"@type": "Organization", "name": "FamilyHub SG", "url": "https://familyhubsg.com/"}, "publisher": {"@type": "Organization", "name": "FamilyHub SG", "url": "https://familyhubsg.com/"}, "mainEntityOfPage": "https://familyhubsg.com/home-inventory-spreadsheet-singapore/"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. There is nothing to sign up for and no email address to hand over. Use it, copy it and share it."}}, {"@type": "Question", "name": "Does anything I type leave my computer?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an ordinary Excel file with no macros and no internet connection. We never see what you type. It stays wherever you save it."}}, {"@type": "Question", "name": "How many items can it hold?", "acceptedAnswer": {"@type": "Answer", "text": "The Inventory sheet has room for 299 rows and the Boxes sheet for 99. To add more, copy the last row and paste it below. Group identical things into one row and set the quantity."}}, {"@type": "Question", "name": "Can I put photos in it?", "acceptedAnswer": {"@type": "Answer", "text": "Not inside the file. Take photos with your phone, give each one a clear name, and type that name in the Photo file name column. The FamilyHub SG app can hold the photos themselves."}}, {"@type": "Question", "name": "Can I import it into the FamilyHub SG app?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. It may come in future, and if you would like it, email support@familyhubsg.com."}}]}
+</script>
+<script>
+/* PostHog: counts visits and where they came from. No session recording. */
+(function(){
+  try{ if(location.search.indexOf('notrack=1')>-1) localStorage.setItem('fh_notrack','1'); }catch(e){}
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.uploadQueue.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_tMSVGTsRAfBvhrK4cbH6wbJ9AKMpGkSJ8Nd967rx7sUC',{
+    api_host:'https://us.i.posthog.com',
+    defaults:'2026-05-30',
+    person_profiles:'identified_only',
+    disable_session_recording:true,
+    loaded:function(ph){
+      try{ if(localStorage.getItem('fh_notrack')==='1') ph.opt_out_capturing(); }catch(e){}
+    }
+  });
+})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <nav aria-label="Main">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FBF8F0"/><path d="M9 26.75 L32 6.75 L55 26.75" fill="none" stroke="#2B2E3A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="15" y="30.75" width="34" height="6.5" rx="3.25" fill="#DC3B24"/><rect x="15" y="40.75" width="34" height="6.5" rx="3.25" fill="#E0A430"/><rect x="15" y="50.75" width="34" height="6.5" rx="3.25" fill="#3FA66A"/></svg>
+      FamilyHub SG
+      <span class="beta-pill">Beta</span>
+    </a>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a class="btn btn-ghost" href="https://app.familyhubsg.com">Sign in</a>
+      <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<article class="col">
+<p class="crumbs"><a href="/">FamilyHub SG</a> / <a href="/guides/">Guides</a> / Home inventory spreadsheet</p>
+<h1>A free home inventory spreadsheet for Singapore</h1>
+<p class="meta">Version 1.0 &middot; Last updated 20 October 2026 &middot; 3 minute read</p>
+<p>An Excel workbook that lists what you own, which room it is in and which box it is packed in. When you need the passport cover, the spare keys or the Christmas lights, you type the name and find the row. No sign-up and no email address.</p>
+<div class="box dl">
+<p><strong>Free download</strong></p>
+<div class="dl-row">
+<a class="btn btn-primary" href="/familyhub-sg-home-inventory-template.xlsx" download>Blank template</a>
+<a class="btn btn-ghost" href="/familyhub-sg-home-inventory-example.xlsx" download>Example copy</a>
+</div>
+<p class="small">Small Excel files (.xlsx). The example copy holds made-up data for a fictional family, so you can see how it fits together.</p>
+</div>
+<h2>What is inside</h2>
+<ul>
+<li><strong>Inventory.</strong> One row per item: name, category, room, box, exact spot, quantity, value, purchase date, brand or serial number, photo file name and notes.</li>
+<li><strong>Boxes.</strong> One row per box: its label, room, where it is kept and a short note on what is inside. The sheet counts how many items you have listed for each box.</li>
+<li><strong>Summary.</strong> Total number of items and their value, then totals by room and by category. It updates by itself.</li>
+</ul>
+<p>Dropdown lists for category and room stop typing mistakes. Total value is quantity times value each. If you leave the quantity empty, it counts as 1.</p>
+<h2>Start in three steps</h2>
+<ol>
+<li>Walk through one room at a time. Type one row for each item, or one row for a group of the same thing and set the quantity.</li>
+<li>Write a label on every box, such as Box 12. Type the same label in the Box or container column, and add the box to the Boxes sheet.</li>
+<li>Open the <strong>Summary</strong> to see the totals.</li>
+</ol>
+<p>Type money as a plain number such as 1200 and dates such as 15 Mar 2027. Values are your own estimates, not valuations.</p>
+<h2>If you may need to claim</h2>
+<p>Keep the receipt or a clear photo of anything valuable, and note the photo&#8217;s file name in the Photo file name column. Insurers differ in what proof they ask for, so ask yours before you need it. This workbook is a record of what you own, not proof for a claim.</p>
+<h2>What it does not do</h2>
+<p>It does not store photos, send reminders, work out what things are worth or share between family members. It handles Singapore dollars only. The <a href="/">FamilyHub SG app</a> has a home inventory that holds photos and is shared with your family.</p>
+<h2>Check it before you rely on it</h2>
+<p>We compared every Summary total with a separate calculation, using the example copy. That check was done in LibreOffice. The file is built for Microsoft Excel and uses only plain formulas. We have not been able to check Google Sheets or Apple Numbers, so compare the Summary with your own sums if you use either.</p>
+<h2>Keep it safe</h2>
+<p>This list shows what you own and where it is. Save it somewhere private and back it up. Do not type passwords, full account or card numbers, or NRIC numbers.</p>
+<h2>Questions</h2>
+<details><summary>Is it really free?</summary>
+<p>Yes. There is nothing to sign up for and no email address to hand over. Use it, copy it and share it.</p></details>
+<details><summary>Does anything I type leave my computer?</summary>
+<p>No. It is an ordinary Excel file with no macros and no internet connection. We never see what you type. It stays wherever you save it.</p></details>
+<details><summary>How many items can it hold?</summary>
+<p>The Inventory sheet has room for 299 rows and the Boxes sheet for 99. To add more, copy the last row and paste it below. Group identical things into one row and set the quantity.</p></details>
+<details><summary>Can I put photos in it?</summary>
+<p>Not inside the file. Take photos with your phone, give each one a clear name, and type that name in the Photo file name column. The FamilyHub SG app can hold the photos themselves.</p></details>
+<details><summary>Can I import it into the FamilyHub SG app?</summary>
+<p>Not yet. It may come in future, and if you would like it, email support@familyhubsg.com.</p></details>
+<div class="box note" style="margin-top:32px">
+<p>I&#8217;m the founder of FamilyHub SG, not a licensed financial adviser or an insurance adviser. The spreadsheet is a record-keeping tool. It is general information, not financial, legal or insurance advice.</p>
+</div>
+<div class="cta">
+<h2>Want photos and your family in it too?</h2>
+<p>FamilyHub SG is a free beta app for Singapore households. Its home inventory holds photos of your items and boxes, and you can share it with your family as viewers or editors. You can export everything to Excel at any time.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
+<a class="btn btn-ghost" href="/">See how it works</a>
+</div>
+</div>
+<p class="small">Related: <a href="/household-tracker-spreadsheet-singapore/">A free family records spreadsheet</a> &middot; <a href="/familyhub-sg-vs-excel-google-sheets-singapore/">FamilyHub SG vs Excel or Google Sheets</a>.</p>
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 FamilyHub SG</span>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/guides/">Guides</a>
+      <a href="https://app.familyhubsg.com/privacy">Privacy</a>
+      <a href="https://app.familyhubsg.com/terms">Terms</a>
+      <a href="https://app.familyhubsg.com">Sign in</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
