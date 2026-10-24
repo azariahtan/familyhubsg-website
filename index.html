@@ -119,10 +119,21 @@
   }
   .btn-ghost:hover{background:var(--bg-alt);}
 
-  .hero{text-align:center;padding:88px 24px 0;max-width:760px;margin:0 auto;}
+  .hero-band{position:relative;overflow:hidden;}
+  .hero{text-align:left;padding:88px 24px 72px;max-width:var(--maxw);margin:0 auto;position:relative;z-index:1;}
+  .hero > *{max-width:500px;}
+  .hero-photo{position:absolute;top:0;right:0;bottom:0;width:60%;z-index:0;}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 45%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 40%);mask-image:linear-gradient(to right,transparent 0,#000 40%);}
+  .hero-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--bg));}
+  @media (max-width:900px){
+    .hero{padding:56px 24px 12px;}
+    .hero > *{max-width:none;}
+    .hero-photo{position:relative;width:100%;height:260px;}
+    .hero-photo img{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 30%);mask-image:linear-gradient(to bottom,transparent 0,#000 30%);}
+  }
   .hero h1{font-size:clamp(32px,5vw,50px);}
-  .hero p.sub{font-size:18px;max-width:540px;margin:0 auto 32px;}
-  .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
+  .hero p.sub{font-size:18px;margin:0 0 32px;}
+  .hero-ctas{display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap;margin-bottom:14px;}
   .hero-note{font-size:13px;color:var(--ink-soft);}
 
   /* browser-chrome frame around every real screenshot */
@@ -172,7 +183,7 @@
   .guides{padding:72px 24px;}
   .guides-inner{max-width:var(--maxw);margin:0 auto;}
   .guides h2{font-size:clamp(23px,3vw,30px);}
-  .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px;}
+  .guide-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:14px;margin-top:24px;}
   .guide-card{display:flex;flex-direction:column;gap:6px;padding:18px 18px 16px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;text-decoration:none;color:var(--ink);transition:border-color .2s,box-shadow .2s;}
   .guide-card:hover{border-color:#cfc6b2;box-shadow:0 10px 24px -18px rgba(33,29,23,.35);}
   .guide-card span{font-family:'Newsreader',Georgia,serif;font-size:18px;line-height:1.2;}
@@ -186,7 +197,8 @@
 
   .trust{padding:88px 24px;}
   .trust-inner-grid{max-width:var(--maxw);margin:0 auto;display:block;}
-  .trust-list{max-width:760px;}
+  .trust-inner-grid > div{max-width:760px;margin:0 auto;}
+  .trust .eyebrow,.trust h2,.trust-inner-grid > div > p{text-align:center;}
   .trust h2{font-size:clamp(24px,3.2vw,32px);}
   .trust-list{list-style:none;padding:0;margin:18px 0 0;}
   .trust-list li{display:flex;gap:10px;padding:8px 0;font-size:14.5px;color:var(--ink-soft);}
@@ -260,6 +272,7 @@
   </nav>
 </header>
 
+<div class="hero-band">
 <section class="hero">
   <h1>Built with the family in mind</h1>
   <p class="sub">Track and organise your family's property, loans, insurance, investments, savings, health and home inventory, all in one place, so your spouse or family always knows where everything is.</p>
@@ -269,11 +282,13 @@
   <p class="hero-note">Free during beta · Built for Singapore households · Export everything free, anytime</p>
   <p class="hero-note" style="margin-top:6px;"><a href="/mylegacy-data-deletion/">Using My Legacy? It deletes stored data on 4 January 2027. See what to save.</a></p>
 </section>
+<div class="hero-photo"><img src="/assets/hero-family.webp" width="1800" height="1199" decoding="async" fetchpriority="high" alt=""></div>
+</div>
 
 <div class="hero-stage" id="heroStage">
   <div class="browser-frame">
     <div class="browser-bar"><span></span><span></span><span></span></div>
-    <img src="/assets/dashboard.webp" width="1548" height="1166" decoding="async" fetchpriority="high" alt="FamilyHub SG dashboard showing total assets, liabilities, net worth and upcoming items due">
+    <img src="/assets/dashboard.webp" width="1548" height="1166" decoding="async" alt="FamilyHub SG dashboard showing total assets, liabilities, net worth and upcoming items due">
   </div>
 </div>
 
@@ -392,8 +407,8 @@
       <h2>Mark what needs attention</h2>
       <p>Set each item to Settled, Review or Urgent. Sort by Priority and the urgent ones rise to the top.</p>
     </div>
-    <div class="feature-visual" style="align-items:center;">
-      <img src="/assets/status-toggle.webp" width="402" height="338" decoding="async" loading="lazy" alt="Status menu with Urgent, Review and Settled options" style="width:100%;max-width:300px;border-radius:12px;border:1px solid var(--line);">
+    <div class="feature-visual" style="padding:0;overflow:hidden;">
+      <img src="/assets/status-toggle.webp" width="1088" height="640" decoding="async" loading="lazy" alt="Status menu with Urgent, Review and Settled options" style="width:100%;height:auto;">
     </div>
   </div>
 </section>
@@ -497,13 +512,12 @@
  
 <section class="guides reveal">
   <div class="guides-inner">
-    <div class="eyebrow">Free guides</div>
     <h2>Guides and templates</h2>
     <div class="guide-grid">
       <a class="guide-card" href="/organise-important-family-documents-singapore/"><span>Organise family documents</span><small>One list of where every paper is</small></a>
       <a class="guide-card" href="/if-something-happens-to-you-checklist-singapore/"><span>If something happens to you</span><small>Which document controls which money</small></a>
       <a class="guide-card" href="/track-insurance-policies-singapore/"><span>Track insurance policies</span><small>A simple 3-step method</small></a>
-      <a class="guide-card" href="/which-app-family-insurance-records-singapore/"><span>Which app for insurance records</span><small>Seedly, Planner Bee, PolicyPal and more</small></a>
+      <a class="guide-card" href="/which-app-family-insurance-records-singapore/"><span>Which app for insurance records</span><small>Apps compared</small></a>
       <a class="guide-card" href="/home-inventory-spreadsheet-singapore/"><span>Home inventory spreadsheet</span><small>Free Excel template</small></a>
       <a class="guide-card" href="/household-tracker-spreadsheet-singapore/"><span>Family records spreadsheet</span><small>Free Excel template</small></a>
       <a class="guide-card" href="/familyhub-sg-vs-excel-google-sheets-singapore/"><span>FamilyHub SG vs Excel</span><small>A side-by-side table</small></a>
