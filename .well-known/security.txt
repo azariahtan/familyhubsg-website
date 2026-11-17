@@ -1,0 +1,4 @@
+Contact: mailto:support@familyhubsg.com
+Expires: 2027-06-30T23:59:00.000Z
+Preferred-Languages: en
+Canonical: https://familyhubsg.com/.well-known/security.txt
