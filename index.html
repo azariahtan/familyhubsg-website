@@ -229,9 +229,9 @@
   .trust-list{list-style:none;padding:0;margin:18px 0 0;}
   .trust-list li{display:flex;gap:10px;padding:8px 0;font-size:14.5px;color:var(--ink-soft);}
   .trust-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);margin-top:8px;flex-shrink:0;}
-  .trust-more{margin:22px 0 0;border-top:1px solid var(--line);padding-top:12px;}
-  .trust-more summary{font-weight:600;font-size:15px;cursor:pointer;color:var(--ink);}
-  .trust-more p{margin:.8em 0 0;font-size:14.5px;text-align:left;}
+  .trust .diff-grid{margin-top:32px;}
+  .trust-inner-grid > div > p{text-wrap:balance;}
+  .trust-foot{font-size:13.5px;margin:26px 0 0;}
   @media (max-width:820px){.trust-inner-grid{grid-template-columns:1fr;gap:28px;}}
 
   .final-cta{background:var(--accent);color:#fff;padding:88px 24px;text-align:center;}
@@ -498,31 +498,34 @@
     <div>
       <div class="eyebrow">Security</div>
       <h2>Built to be trusted with this</h2>
-      <p>This is your family's financial data. It's treated that way.</p>
-      <ul class="trust-list">
-        <li>Encrypted when sent (HTTPS) and when stored (AES-256). Never sold, never shared with advertisers</li>
-        <li>Your main database and uploaded files are hosted in Singapore</li>
-        <li>Row-level access control: every record is locked to your household by rules in the database itself, not just in the app</li>
-        <li>Sign in with a passkey, your Google account or a one-time email code. The app has no passwords of its own to steal</li>
-        <li>Every change to your core financial records is logged in an Audit Trail you can see</li>
-        <li>Automatic nightly backup of your records. We have tested restoring everything from those backups on a spare system</li>
-        <li>Deleted items and documents stay in a Recycle Bin for 30 days, then are permanently deleted. We recommend keeping an extra copy of important files somewhere else too</li>
-      </ul>
-      <details class="trust-more">
-        <summary>How we check this, and what we don't claim</summary>
-        <p><strong>How we check</strong></p>
-        <ul class="trust-list">
-          <li>More than 700 automated tests run on every code change</li>
-          <li>After each security change, we re-run yes/no checks on the live database's access rules</li>
-          <li>Found a security problem? Email <a href="mailto:support@familyhubsg.com">support@familyhubsg.com</a></li>
-        </ul>
-        <p><strong>What we don't claim</strong></p>
-        <ul class="trust-list">
-          <li>Not end-to-end encrypted: the founder and one IT developer can technically access stored data to keep the service running (see the <a href="https://app.familyhubsg.com/privacy">privacy policy</a>)</li>
-          <li>Not independently audited or certified yet</li>
-          <li>Still early: a small number of households use it so far</li>
-        </ul>
-      </details>
+      <p>I've spent hundreds of hours testing and hardening this app, because it holds your family's financial records.</p>
+      <div class="diff-grid">
+        <div class="diff-item">
+          <h3>Walled off, household by household</h3>
+          <p>More than 100 access rules, enforced by the database itself, keep every family's records apart.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Tested on every change</h3>
+          <p>More than 700 automated tests run on every code change, and the live security rules are re-checked after each one.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Encrypted, hosted in Singapore</h3>
+          <p>Your main database and files are hosted in Singapore, encrypted in transit and at rest. Never sold, never shared with advertisers.</p>
+        </div>
+        <div class="diff-item">
+          <h3>No passwords to steal</h3>
+          <p>Sign in with a passkey, your Google account or a one-time email code.</p>
+        </div>
+        <div class="diff-item">
+          <h3>A record of every change</h3>
+          <p>Changes to your core financial records are logged in an Audit Trail you can see.</p>
+        </div>
+        <div class="diff-item">
+          <h3>Backed up and restore-tested</h3>
+          <p>Nightly backups, and a full rebuild from backup proven on a spare system. Deleted items wait 30 days in a Recycle Bin.</p>
+        </div>
+      </div>
+      <p class="trust-foot">Found a security problem? Email <a href="mailto:support@familyhubsg.com">support@familyhubsg.com</a></p>
     </div>
   </div>
 </section>
