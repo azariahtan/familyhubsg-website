@@ -160,13 +160,14 @@
   .box{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:16px;}
   .box.note{border-left-color:var(--amber);}
   .box p:last-child,.box ol:last-child{margin-bottom:0;}
-  .scroll{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--line);border-radius:12px;}
-  .scroll table{min-width:560px;}
-  .scroll td:first-child{width:auto;}
-  @media (max-width:760px){.scroll table,.scroll thead,.scroll tbody{display:table;}.scroll thead{position:static;}.scroll tr{display:table-row;border:0;margin:0;padding:0;}.scroll th,.scroll td{display:table-cell;padding:12px 14px;border-bottom:1px solid var(--line);}.scroll td::before{display:none;}}
   details{border-bottom:1px solid var(--line);padding:12px 0;}
   summary{cursor:pointer;font-weight:600;}
   details p{margin:10px 0 0;}
+@media (max-width:760px){
+tbody tr{display:block;border:1px solid var(--line);border-radius:12px;margin:0 0 12px;padding:6px 0;background:#fff;}
+td:first-child{font-size:16px;padding-bottom:4px;}
+caption{display:block;}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"If something happens to you: a checklist for your family in Singapore","datePublished":"2026-10-16","dateModified":"2026-10-19","inLanguage":"en-SG","author":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"publisher":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"mainEntityOfPage":"https://familyhubsg.com/if-something-happens-to-you-checklist-singapore/"}
@@ -227,14 +228,14 @@
 
 <h2>Which document controls which money</h2>
 <p>The most common mistake is thinking a will covers everything. It does not.</p>
-<div class="scroll">
+<div class="tablewrap">
   <table>
     <thead><tr><th>What</th><th>What decides who gets it</th><th>If you have nothing in place</th></tr></thead>
     <tbody>
-      <tr><td>CPF savings</td><td>Your CPF nomination. CPF says a will cannot be used to distribute CPF savings.</td><td>The Public Trustee distributes it under the intestacy rules, for a fee. CPF says claiming can take up to six months.</td></tr>
-      <tr><td>Life insurance payouts</td><td>The nomination you made with the insurer (trust or revocable).</td><td>The payout usually becomes part of your estate.</td></tr>
-      <tr><td>Other assets in your name</td><td>Your will.</td><td>The Intestate Succession Act sets fixed shares (not for Muslims, see below).</td></tr>
-      <tr><td>Decisions if you lose mental capacity</td><td>A Lasting Power of Attorney.</td><td>No one you chose has the authority to act for you.</td></tr>
+      <tr><td>CPF savings</td><td data-label="What decides who gets it">Your CPF nomination. CPF says a will cannot be used to distribute CPF savings.</td><td data-label="If you have nothing in place">The Public Trustee distributes it under the intestacy rules, for a fee. CPF says claiming can take up to six months.</td></tr>
+      <tr><td>Life insurance payouts</td><td data-label="What decides who gets it">The nomination you made with the insurer (trust or revocable).</td><td data-label="If you have nothing in place">The payout usually becomes part of your estate.</td></tr>
+      <tr><td>Other assets in your name</td><td data-label="What decides who gets it">Your will.</td><td data-label="If you have nothing in place">The Intestate Succession Act sets fixed shares (not for Muslims, see below).</td></tr>
+      <tr><td>Decisions if you lose mental capacity</td><td data-label="What decides who gets it">A Lasting Power of Attorney.</td><td data-label="If you have nothing in place">No one you chose has the authority to act for you.</td></tr>
     </tbody>
   </table>
 </div>
@@ -282,16 +283,16 @@
 
 <h2>5. Write the list your family will need</h2>
 <p>All of the above only helps if people can find it. Record these, in one place:</p>
-<div class="scroll">
+<div class="tablewrap">
   <table>
     <thead><tr><th>Write down</th><th>Why</th></tr></thead>
     <tbody>
-      <tr><td>Where your will, LPA and policies are kept, and who your lawyer or adviser is</td><td>Your family needs these first.</td></tr>
-      <tr><td>Who your CPF and insurance nominees are, and when you last checked</td><td>Nominations go out of date silently.</td></tr>
-      <tr><td>Each insurance policy: insurer, policy number, who is covered</td><td>Policies nobody knows about are never claimed.</td></tr>
-      <tr><td>Banks, loans, investments, and who to call for each</td><td>Your accounts will be frozen until someone has authority, so they need to know what exists.</td></tr>
-      <tr><td>Regular payments and subscriptions</td><td>So nothing lapses by accident.</td></tr>
-      <tr><td>Who to call first</td><td>One name, one number.</td></tr>
+      <tr><td>Where your will, LPA and policies are kept, and who your lawyer or adviser is</td><td data-label="Why">Your family needs these first.</td></tr>
+      <tr><td>Who your CPF and insurance nominees are, and when you last checked</td><td data-label="Why">Nominations go out of date silently.</td></tr>
+      <tr><td>Each insurance policy: insurer, policy number, who is covered</td><td data-label="Why">Policies nobody knows about are never claimed.</td></tr>
+      <tr><td>Banks, loans, investments, and who to call for each</td><td data-label="Why">Your accounts will be frozen until someone has authority, so they need to know what exists.</td></tr>
+      <tr><td>Regular payments and subscriptions</td><td data-label="Why">So nothing lapses by accident.</td></tr>
+      <tr><td>Who to call first</td><td data-label="Why">One name, one number.</td></tr>
     </tbody>
   </table>
 </div>

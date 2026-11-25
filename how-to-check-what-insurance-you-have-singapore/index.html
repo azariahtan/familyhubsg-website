@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to check what insurance you have in Singapore (2026)</title>
-<meta name="description" content="Check your own policies with SGFinDex and CPF, and trace a deceased parent&#x27;s through the insurers. What each route shows, what it misses. Checked November 2026.">
+<meta name="description" content="Check your own policies with SGFinDex and CPF, and trace a deceased parent&#x27;s through the insurers. What each route shows and misses. Checked November 2026.">
 <link rel="canonical" href="https://familyhubsg.com/how-to-check-what-insurance-you-have-singapore/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to check what insurance policies you have in Singapore">
-<meta property="og:description" content="Check your own policies with SGFinDex and CPF, and trace a deceased parent&#x27;s through the insurers. What each route shows, what it misses. Checked November 2026.">
+<meta property="og:description" content="Check your own policies with SGFinDex and CPF, and trace a deceased parent&#x27;s through the insurers. What each route shows and misses. Checked November 2026.">
 <meta property="og:url" content="https://familyhubsg.com/how-to-check-what-insurance-you-have-singapore/">
 <meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -160,19 +160,20 @@
   .box{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:16px;}
   .box.note{border-left-color:var(--amber);}
   .box p:last-child,.box ol:last-child{margin-bottom:0;}
-  .scroll{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--line);border-radius:12px;}
-  .scroll table{min-width:560px;}
-  .scroll td:first-child{width:auto;}
-  @media (max-width:760px){.scroll table,.scroll thead,.scroll tbody{display:table;}.scroll thead{position:static;}.scroll tr{display:table-row;border:0;margin:0;padding:0;}.scroll th,.scroll td{display:table-cell;padding:12px 14px;border-bottom:1px solid var(--line);}.scroll td::before{display:none;}}
   details{border-bottom:1px solid var(--line);padding:12px 0;}
   summary{cursor:pointer;font-weight:600;}
   details p{margin:10px 0 0;}
+@media (max-width:760px){
+tbody tr{display:block;border:1px solid var(--line);border-radius:12px;margin:0 0 12px;padding:6px 0;background:#fff;}
+td:first-child{font-size:16px;padding-bottom:4px;}
+caption{display:block;}
+}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"How to check what insurance policies you have in Singapore","datePublished":"2026-11-24","dateModified":"2026-11-24","inLanguage":"en-SG","author":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"publisher":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"mainEntityOfPage":"https://familyhubsg.com/how-to-check-what-insurance-you-have-singapore/"}
+{"@context":"https://schema.org","@type":"Article","headline":"How to check what insurance policies you have in Singapore","datePublished":"2026-11-24","dateModified":"2026-11-25","inLanguage":"en-SG","author":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"publisher":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"mainEntityOfPage":"https://familyhubsg.com/how-to-check-what-insurance-you-have-singapore/"}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is SGFinDex safe?","acceptedAnswer":{"@type":"Answer","text":"MAS says your data is shared only with your consent, and is encrypted when it is retrieved. SGFinDex itself cannot read or store it. Your consent lasts one year, and it is extended when you retrieve your data again, if the institution's system supports that."}},{"@type":"Question","name":"Why is one of my policies missing from SGFinDex?","acceptedAnswer":{"@type":"Answer","text":"The usual reasons: you are not the policyholder (for example, a parent owns a policy on your life), the policy is no longer active, the insurer does not take part, the policy is not a life or health policy, or the insurer has not yet sent its month-end update. Ask the insurer directly."}},{"@type":"Question","name":"Can I use SGFinDex to find a parent's policies?","acceptedAnswer":{"@type":"Answer","text":"The official pages describe SGFinDex as a way to retrieve your own information with your own Singpass. For a family member's policies, LIA says to contact the insurance companies directly."}},{"@type":"Question","name":"How do I check my insurance in Singpass?","acceptedAnswer":{"@type":"Answer","text":"Singpass is only the login. You open SGFinDex from the app or website of a participating bank or insurer, log in with Singpass, and your policies are shown there."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is SGFinDex safe?","acceptedAnswer":{"@type":"Answer","text":"MAS says your data is shared only with your consent and is encrypted. SGFinDex itself cannot read or store it."}},{"@type":"Question","name":"Why is one of my policies missing?","acceptedAnswer":{"@type":"Answer","text":"You may not be the policyholder, the policy may be inactive, the insurer may not take part, or it may not be a life or health policy. Ask the insurer."}},{"@type":"Question","name":"Can I use SGFinDex for a parent's policies?","acceptedAnswer":{"@type":"Answer","text":"The official pages describe it as a way to get your own information with your own Singpass. For a family member's policies, LIA says to contact the insurers directly."}},{"@type":"Question","name":"How do I check my insurance in Singpass?","acceptedAnswer":{"@type":"Answer","text":"Singpass is only the login. You open SGFinDex from a participating bank or insurer's app, log in with Singpass, and your policies show there."}}]}
 </script>
 <script>
 /* PostHog: counts visits and where they came from. No session recording. */
@@ -212,100 +213,84 @@
 <article class="col">
   <p class="crumbs"><a href="/">FamilyHub SG</a> / Check your insurance</p>
 <h1>How to check what insurance policies you have in Singapore</h1>
-  <p class="meta">Last checked 24 November 2026 · 5 minute read</p>
-
-  <p>No single place shows every policy you hold. A government service covers part of it. For the rest, you ask the insurers. This guide covers your own policies first, then a parent's or relative's after they have died.</p>
+  <p class="meta">Last checked 24 November 2026 · 3 minute read</p>
 
   <div class="box">
-    <p><strong>The short version</strong></p>
-    <ol>
-      <li><strong>Your life and health policies:</strong> SGFinDex shows those from seven insurers.</li>
-      <li><strong>Your hospital cover:</strong> the CPF Healthcare dashboard.</li>
-      <li><strong>Everything else, and a family member's policies:</strong> ask the insurers directly.</li>
-    </ol>
+    <p><strong>Short answer:</strong> use SGFinDex for your own life and health policies. Use CPF's Healthcare dashboard for MediShield Life or an Integrated Shield Plan. For anything else, and for a parent who has died, ask the insurers directly.</p>
   </div>
 
-  <h2>Check your own policies</h2>
+  <h2>Where to check</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Where</th><th>Use it for</th><th>It will not show</th></tr></thead>
+    <tbody>
+      <tr><td>SGFinDex</td><td data-label="Use it for">Your own life and health policies from 7 insurers</td><td data-label="It will not show">Policies you do not own, inactive policies, other insurers, motor, home and travel</td></tr>
+      <tr><td>CPF Healthcare dashboard</td><td data-label="Use it for">MediShield Life and Integrated Shield Plan cover, for you and the dependants whose premiums you pay</td><td data-label="It will not show">Any other insurance</td></tr>
+      <tr><td>The insurer (app or call)</td><td data-label="Use it for">Any other policy</td><td data-label="It will not show">Other insurers' policies</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Insurer lists: <a href="https://www.lia.org.sg/about-us/member-companies/">LIA members</a> (life) and the <a href="https://gia.org.sg/consumers/about/member-directory.html">GIA directory</a> (general: motor, home, travel).</p>
 
-  <h3>1. SGFinDex</h3>
-  <p>SGFinDex lets you view your policy details from the participating insurers in one place. MAS says it is currently free to use. Singpass is only the login: your policies are shown in the app or website of a participating bank or insurer.</p>
+  <h2>Use SGFinDex in 4 steps</h2>
   <ol>
     <li>Open the app or website of a participating bank or insurer and log in.</li>
     <li>Choose SGFinDex and log in with Singpass.</li>
-    <li>Pick the insurers you want to connect. You then log in to each one to give your consent. AIA Singapore, Income, Prudential Singapore and Singlife let you do this with Singpass. The others use their own login, so you need an online account with them.</li>
+    <li>Pick your insurers and log in to each one to give consent. AIA Singapore, Income, Prudential Singapore and Singlife accept Singpass here. The others need their own login.</li>
     <li>Go back and retrieve your data.</li>
   </ol>
+  <p>The 7 insurers are AIA Singapore, Great Eastern, HSBC Life, Income, Manulife Singapore, Prudential Singapore and Singlife. MAS says SGFinDex is currently free. It only returns policies where you are the policyholder or a joint policyholder. A policy your parent owns on your life will not appear.</p>
+  <p>Data is month-end. HSBC Life updates daily. The others update by the 7th day after month-end, so recent changes may not show yet.</p>
 
+  <h2>If a parent or relative has died</h2>
   <div class="box note">
-    <p><strong>What SGFinDex will not show</strong></p>
-    <ul>
-      <li><strong>Policies you do not own.</strong> It only returns policies where you are the policyholder or a joint policyholder. A policy a parent owns on your life will not appear.</li>
-      <li><strong>Policies that are no longer active.</strong></li>
-      <li><strong>Other insurers.</strong> The seven are AIA Singapore, Great Eastern, HSBC Life, Income, Manulife Singapore, Prudential Singapore and Singlife.</li>
-      <li><strong>Other kinds of cover.</strong> Its insurance data is for individual life and health policies. Motor, home and travel insurance are not included.</li>
-      <li><strong>Today's picture.</strong> It shows month-end details. HSBC Life updates daily. The other insurers update by the 7th day after month-end.</li>
-    </ul>
+    <p>Older guides send you to LIA's register of unclaimed insurance proceeds. LIA's page now says that register has been permanently removed. LIA says to contact the insurance companies directly.</p>
   </div>
-
-  <h3>2. CPF Healthcare dashboard</h3>
-  <p>Log in at cpf.gov.sg/healthcare and open "Coverage and premium details". MOH says this shows MediShield Life and Integrated Shield Plan coverage and premiums for you and for the dependants whose premiums you pay.</p>
-
-  <h3>3. The insurer, or your own papers</h3>
-  <p>For a policy that SGFinDex does not show, ask the insurer or log in to its app. The Life Insurance Association (LIA) lists its member life insurers. The General Insurance Association (GIA) lists general insurers, such as motor, home and travel.</p>
-  <p><em>Our suggestion, not an official step:</em> look through old emails and bank or card statements for regular payments to an insurer you do not recognise, and ask your agent or adviser for a list of everything you hold with them.</p>
-
-  <h2>Find a parent's or relative's policies after they have died</h2>
-
-  <div class="box note">
-    <p>Older guides point you to LIA's online register of unclaimed insurance proceeds. LIA's page now says that register has been permanently removed.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Step</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td>1. List likely insurers</td><td data-label="What to do">Check their papers, emails, bank statements and will, and ask their agent. This step is our suggestion, not an official one.</td></tr>
+      <tr><td>2. Contact each insurer</td><td data-label="What to do">Use the LIA and GIA lists above. Each insurer has its own process. LifeSG says to expect to be asked for a death certificate and proof of your relationship.</td></tr>
+      <tr><td>3. Check CPF</td><td data-label="What to do">If they were under the Dependants' Protection Scheme, CPF tells Great Eastern Life, which sends claim details to the nominee or the member's address. MediShield Life and Integrated Shield Plan cover ends automatically.</td></tr>
+      <tr><td>4. Ask about the claim</td><td data-label="What to do">With no valid nomination, LIA says a Grant of Probate or Letters of Administration may be needed before a payout. Ask a lawyer.</td></tr>
+    </tbody>
+  </table>
   </div>
-
-  <p>LIA says that if you want to know whether a family member had policies, you contact the insurance companies directly.</p>
-  <ol>
-    <li><strong>List the likely insurers.</strong> <em>Our suggestion:</em> check their papers, emails, bank statements and will, and ask their agent or adviser if they had one.</li>
-    <li><strong>Contact each insurer.</strong> Use the LIA and GIA lists above. Each insurer has its own process. LifeSG says to ask what documents it needs, such as a death certificate and proof of your relationship to the person.</li>
-    <li><strong>If they were a CPF member, check CPF.</strong> If they were covered under the Dependants' Protection Scheme (DPS), CPF informs the insurer, Great Eastern Life, which then sends claim details to the DPS nominee or the member's address. MediShield Life and Integrated Shield Plan cover ends on death.</li>
-    <li><strong>Once you find a policy, ask about the claim.</strong> LIA says a Grant of Probate or Letters of Administration may be needed before a payout if there is no valid nomination. For legal questions, speak to a lawyer.</li>
-  </ol>
-
-  <h2>Once you have found them</h2>
-  <p>Write each policy in one list, with the same details every time. Our guide <a href="/track-insurance-policies-singapore/">How to keep track of all your family's insurance policies</a> shows what to record. Do it while you are well, so your family does not have to search later.</p>
 
   <h2>Common questions</h2>
   <details><summary>Is SGFinDex safe?</summary>
-    <p>MAS says your data is shared only with your consent, and is encrypted when it is retrieved. SGFinDex itself cannot read or store it. Your consent lasts one year, and it is extended when you retrieve your data again, if the institution&#x27;s system supports that.</p></details>
-  <details><summary>Why is one of my policies missing from SGFinDex?</summary>
-    <p>The usual reasons: you are not the policyholder (for example, a parent owns a policy on your life), the policy is no longer active, the insurer does not take part, the policy is not a life or health policy, or the insurer has not yet sent its month-end update. Ask the insurer directly.</p></details>
-  <details><summary>Can I use SGFinDex to find a parent&#x27;s policies?</summary>
-    <p>The official pages describe SGFinDex as a way to retrieve your own information with your own Singpass. For a family member&#x27;s policies, LIA says to contact the insurance companies directly.</p></details>
+    <p>MAS says your data is shared only with your consent and is encrypted. SGFinDex itself cannot read or store it.</p></details>
+  <details><summary>Why is one of my policies missing?</summary>
+    <p>You may not be the policyholder, the policy may be inactive, the insurer may not take part, or it may not be a life or health policy. Ask the insurer.</p></details>
+  <details><summary>Can I use SGFinDex for a parent&#x27;s policies?</summary>
+    <p>The official pages describe it as a way to get your own information with your own Singpass. For a family member&#x27;s policies, LIA says to contact the insurers directly.</p></details>
   <details><summary>How do I check my insurance in Singpass?</summary>
-    <p>Singpass is only the login. You open SGFinDex from the app or website of a participating bank or insurer, log in with Singpass, and your policies are shown there.</p></details>
+    <p>Singpass is only the login. You open SGFinDex from a participating bank or insurer&#x27;s app, log in with Singpass, and your policies show there.</p></details>
 
-  <div class="box note" style="margin-top:32px">
-    <p>I'm the founder of FamilyHub SG, not a licensed financial adviser. This is general information on how to find your policies, not advice on what to buy or whether your cover is enough. For that, speak to a licensed adviser.</p>
-  </div>
+  <p>Once you have found your policies, keep them in one list: <a href="/track-insurance-policies-singapore/">how to track your family's insurance policies</a>.</p>
 
   <div class="cta">
   <h2>Want every policy in one place your family can see?</h2>
-  <p>FamilyHub SG is a free beta app for Singapore households. It keeps insurance, loans, property and family records together, and you can share it with your family as viewers or editors. You can export everything to Excel at any time. Prefer to look first? On the sign-in page, choose Look around a sample family. No email needed.</p>
+  <p>FamilyHub SG is a free beta app for Singapore households. Insurance, loans, property and records in one place, shared with family as viewers or editors, with an Excel export any time.</p>
   <div class="cta-row">
   <a class="btn btn-primary" href="https://app.familyhubsg.com">Get started</a>
   <a class="btn btn-ghost" href="/">See how it works</a>
   </div>
   </div>
 
+  <p class="small">I'm the founder of FamilyHub SG, not a licensed financial adviser. This is general information on how to find policies, not advice. For advice, speak to a licensed adviser.</p>
+
   <h2>Sources</h2>
   <ul class="small sources">
-    <li>Monetary Authority of Singapore, <a href="https://www.mas.gov.sg/development/fintech/sgfindex">SGFinDex</a> (participating insurers, data, free use). Page last updated 27 August 2026; checked 24 November 2026.</li>
-    <li>Monetary Authority of Singapore, <a href="https://www.mas.gov.sg/-/media/mas-media-library/development/fintech/sgfindex/sgfindex---frequently-asked-questions-v9-_-20251218.pdf">SGFinDex Frequently Asked Questions</a> (version 9, December 2025: how to retrieve, policyholder only, active policies only, update timing, consent). Checked 24 November 2026.</li>
-    <li>Ministry of Health, <a href="https://ask.gov.sg/moh/questions/cm2vs5mns00e712kzm84kkq14">How can I find out if I am covered under MediShield Life or an Integrated Shield Plan?</a> Checked 24 November 2026.</li>
-    <li>LifeSG, <a href="https://ask.gov.sg/lifesg/questions/cmt2gv3i2015j4g01df48i7s5">How to check the deceased's insurance policy?</a> Checked 24 November 2026.</li>
-    <li>Life Insurance Association Singapore, <a href="https://www.lia.org.sg/tools-and-resources/checking-for-unclaimed-proceeds/">Checking for unclaimed proceeds</a> (register removed; contact insurers) and <a href="https://www.lia.org.sg/about-us/member-companies/">member companies</a>. No page date shown; checked 24 November 2026.</li>
-    <li>Life Insurance Association Singapore, <a href="https://www.lia.org.sg/media/4815/ygtnin-english-2026.pdf">Your guide to nominating beneficiaries</a> (2026 edition; when a court grant may be needed). Checked 24 November 2026.</li>
-    <li>CPF Board, <a href="https://www.cpf.gov.sg/member/account-services/cpf-asset-management/on-your-passing-away">Paying out CPF when you pass away</a> (DPS, MediShield Life and Integrated Shield Plan on death). Page last updated 23 November 2026; checked 24 November 2026.</li>
-    <li>General Insurance Association of Singapore, <a href="https://gia.org.sg/consumers/about/member-directory.html">Member directory</a>. Checked 24 November 2026.</li>
+    <li>MAS, <a href="https://www.mas.gov.sg/development/fintech/sgfindex">SGFinDex</a> (page updated 27 August 2026) and <a href="https://www.mas.gov.sg/-/media/mas-media-library/development/fintech/sgfindex/sgfindex---frequently-asked-questions-v9-_-20251218.pdf">SGFinDex FAQ</a> (version 9, December 2025).</li>
+    <li>Ministry of Health, <a href="https://ask.gov.sg/moh/questions/cm2vs5mns00e712kzm84kkq14">How can I find out if I am covered under MediShield Life or an Integrated Shield Plan?</a></li>
+    <li>LifeSG, <a href="https://ask.gov.sg/lifesg/questions/cmt2gv3i2015j4g01df48i7s5">How to check the deceased's insurance policy?</a></li>
+    <li>Life Insurance Association, <a href="https://www.lia.org.sg/tools-and-resources/checking-for-unclaimed-proceeds/">Checking for unclaimed proceeds</a> and <a href="https://www.lia.org.sg/media/4815/ygtnin-english-2026.pdf">guide to nominating beneficiaries</a> (2026).</li>
+    <li>CPF Board, <a href="https://www.cpf.gov.sg/member/account-services/cpf-asset-management/on-your-passing-away">Paying out CPF when you pass away</a> (page updated 23 November 2026).</li>
+    <li>General Insurance Association of Singapore, <a href="https://gia.org.sg/consumers/about/member-directory.html">Member directory</a>.</li>
   </ul>
-  <p class="small">Related: <a href="/track-insurance-policies-singapore/">Track your family's insurance policies</a> &middot; <a href="/if-something-happens-to-you-checklist-singapore/">If something happens to you: a checklist for your family</a> &middot; <a href="/organise-important-family-documents-singapore/">How to organise important family documents</a>.</p>
+  <p class="small">All pages checked 24 November 2026. Related: <a href="/if-something-happens-to-you-checklist-singapore/">If something happens to you: a checklist</a> &middot; <a href="/organise-important-family-documents-singapore/">How to organise important family documents</a>.</p>
 </article>
 </main>
 

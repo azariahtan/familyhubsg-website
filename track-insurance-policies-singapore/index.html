@@ -160,13 +160,14 @@
   .box{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:16px 18px;margin:22px 0;font-size:16px;}
   .box.note{border-left-color:var(--amber);}
   .box p:last-child,.box ol:last-child{margin-bottom:0;}
-  .scroll{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--line);border-radius:12px;}
-  .scroll table{min-width:560px;}
-  .scroll td:first-child{width:auto;}
-  @media (max-width:760px){.scroll table,.scroll thead,.scroll tbody{display:table;}.scroll thead{position:static;}.scroll tr{display:table-row;border:0;margin:0;padding:0;}.scroll th,.scroll td{display:table-cell;padding:12px 14px;border-bottom:1px solid var(--line);}.scroll td::before{display:none;}}
   details{border-bottom:1px solid var(--line);padding:12px 0;}
   summary{cursor:pointer;font-weight:600;}
   details p{margin:10px 0 0;}
+@media (max-width:760px){
+tbody tr{display:block;border:1px solid var(--line);border-radius:12px;margin:0 0 12px;padding:6px 0;background:#fff;}
+td:first-child{font-size:16px;padding-bottom:4px;}
+caption{display:block;}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"How to keep track of all your family's insurance policies in Singapore","datePublished":"2026-10-14","dateModified":"2026-10-19","inLanguage":"en-SG","author":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"publisher":{"@type":"Organization","name":"FamilyHub SG","url":"https://familyhubsg.com/"},"mainEntityOfPage":"https://familyhubsg.com/track-insurance-policies-singapore/"}
@@ -247,21 +248,21 @@
 
   <h2>Step 2. Write down the same details for every policy</h2>
   <p>The value comes from using the same columns every time, so you can compare policies and add up totals. Whether you use a spreadsheet or an app, record these:</p>
-  <div class="scroll">
+  <div class="tablewrap">
     <table>
       <thead><tr><th>What to record</th><th>Why it matters</th></tr></thead>
       <tbody>
-        <tr><td>Who is covered, and who owns the policy</td><td>Decides who can claim and who can make changes.</td></tr>
-        <tr><td>Insurer and policy number</td><td>The first thing your family will need to make a call.</td></tr>
-        <tr><td>Type: life, health, critical illness, disability, personal accident, car, home, travel, mortgage</td><td>Lets you spot gaps and overlaps at a glance.</td></tr>
-        <tr><td>What it covers, in a few words</td><td>Saves digging through a 40-page contract.</td></tr>
-        <tr><td>Premium amount and how often you pay</td><td>Shows the real yearly cost of all your policies together.</td></tr>
-        <tr><td>GIRO or manual payment, and the next due date</td><td>A missed manual payment is the easiest way to lose cover by accident.</td></tr>
-        <tr><td>When premium payments end</td><td>Some policies stop collecting premiums long before the cover itself ends.</td></tr>
-        <tr><td>Sum assured</td><td>What the policy is meant to pay out.</td></tr>
-        <tr><td>Current cash (surrender) value, if any, and the date you checked it</td><td>Counts towards what your family really owns.</td></tr>
-        <tr><td>Nominee or beneficiary</td><td>Check it still matches your wishes after marriage, a birth or a divorce.</td></tr>
-        <tr><td>Where the paper policy is kept, and your adviser's contact</td><td>Saves your family a search at the worst time.</td></tr>
+        <tr><td>Who is covered, and who owns the policy</td><td data-label="Why it matters">Decides who can claim and who can make changes.</td></tr>
+        <tr><td>Insurer and policy number</td><td data-label="Why it matters">The first thing your family will need to make a call.</td></tr>
+        <tr><td>Type: life, health, critical illness, disability, personal accident, car, home, travel, mortgage</td><td data-label="Why it matters">Lets you spot gaps and overlaps at a glance.</td></tr>
+        <tr><td>What it covers, in a few words</td><td data-label="Why it matters">Saves digging through a 40-page contract.</td></tr>
+        <tr><td>Premium amount and how often you pay</td><td data-label="Why it matters">Shows the real yearly cost of all your policies together.</td></tr>
+        <tr><td>GIRO or manual payment, and the next due date</td><td data-label="Why it matters">A missed manual payment is the easiest way to lose cover by accident.</td></tr>
+        <tr><td>When premium payments end</td><td data-label="Why it matters">Some policies stop collecting premiums long before the cover itself ends.</td></tr>
+        <tr><td>Sum assured</td><td data-label="Why it matters">What the policy is meant to pay out.</td></tr>
+        <tr><td>Current cash (surrender) value, if any, and the date you checked it</td><td data-label="Why it matters">Counts towards what your family really owns.</td></tr>
+        <tr><td>Nominee or beneficiary</td><td data-label="Why it matters">Check it still matches your wishes after marriage, a birth or a divorce.</td></tr>
+        <tr><td>Where the paper policy is kept, and your adviser's contact</td><td data-label="Why it matters">Saves your family a search at the worst time.</td></tr>
       </tbody>
     </table>
   </div>
@@ -275,15 +276,15 @@
   </ul>
 
   <h2>Spreadsheet, insurer apps or a family app?</h2>
-  <div class="scroll">
+  <div class="tablewrap">
     <table>
       <thead><tr><th></th><th>Spreadsheet</th><th>Insurer apps</th><th>SGFinDex-based apps</th><th>FamilyHub SG (beta)</th></tr></thead>
       <tbody>
-        <tr><td><strong>Cost</strong></td><td>Free to start</td><td>Varies</td><td>Varies by app</td><td>Free during the beta</td></tr>
-        <tr><td><strong>Covers all insurers</strong></td><td>Yes, you type it in</td><td>Its own insurer only</td><td>Participating insurers only</td><td>Yes, you type it in</td></tr>
-        <tr><td><strong>Reminders</strong></td><td>Only if you build them</td><td>Varies</td><td>Varies by app</td><td>In-app alerts for premiums due and premiums ending</td></tr>
-        <tr><td><strong>Shared with family</strong></td><td>Share the file</td><td>Varies</td><td>Your own data, using your Singpass</td><td>Shared household, edit or view-only access</td></tr>
-        <tr><td><strong>Main catch</strong></td><td>No built-in reminders</td><td>Policies end up spread across several apps</td><td>Covers participating insurers and some policy types</td><td>You type each policy once; it does not connect to insurers</td></tr>
+        <tr><td><strong>Cost</strong></td><td data-label="Spreadsheet">Free to start</td><td data-label="Insurer apps">Varies</td><td data-label="SGFinDex-based apps">Varies by app</td><td data-label="FamilyHub SG (beta)">Free during the beta</td></tr>
+        <tr><td><strong>Covers all insurers</strong></td><td data-label="Spreadsheet">Yes, you type it in</td><td data-label="Insurer apps">Its own insurer only</td><td data-label="SGFinDex-based apps">Participating insurers only</td><td data-label="FamilyHub SG (beta)">Yes, you type it in</td></tr>
+        <tr><td><strong>Reminders</strong></td><td data-label="Spreadsheet">Only if you build them</td><td data-label="Insurer apps">Varies</td><td data-label="SGFinDex-based apps">Varies by app</td><td data-label="FamilyHub SG (beta)">In-app alerts for premiums due and premiums ending</td></tr>
+        <tr><td><strong>Shared with family</strong></td><td data-label="Spreadsheet">Share the file</td><td data-label="Insurer apps">Varies</td><td data-label="SGFinDex-based apps">Your own data, using your Singpass</td><td data-label="FamilyHub SG (beta)">Shared household, edit or view-only access</td></tr>
+        <tr><td><strong>Main catch</strong></td><td data-label="Spreadsheet">No built-in reminders</td><td data-label="Insurer apps">Policies end up spread across several apps</td><td data-label="SGFinDex-based apps">Covers participating insurers and some policy types</td><td data-label="FamilyHub SG (beta)">You type each policy once; it does not connect to insurers</td></tr>
       </tbody>
     </table>
   </div>
